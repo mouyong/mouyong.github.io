@@ -280,7 +280,7 @@ duoshuo_info:
   ua_enable: true
   admin_enable: true
   user_id: 9062846
-  admin_nickname: i2u
+  #admin_nickname: i2u
 
 
 # Facebook SDK Support.
