@@ -70,7 +70,7 @@ theme: next
 deploy:
   type: git
   #repo: git@github.com:mouyong/mouyong.github.io.git
-  repo: https://mouyong:jiandanai13@github.com/mouyong/mouyong.github.io.git
+  repo: https://github.com/mouyong/mouyong.github.io.git
   branch: master
 
 creative_commons: by-nc-sa
