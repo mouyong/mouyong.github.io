@@ -7,3 +7,4 @@ public/
 .deploy*/
 source/_drafts/*
 themes/next/*
+.idea/
