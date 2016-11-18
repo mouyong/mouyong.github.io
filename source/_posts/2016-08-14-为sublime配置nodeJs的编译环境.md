@@ -7,7 +7,7 @@ categories:
 tags:
   - sublime
   - nodeJs
-
+english_title: nodejs-sublime
 ---
 在sublie text下编辑nodeJs的文件后，笔者希望能直接编译并查看效果，为此笔者google后做了如下操作：
 ==================
