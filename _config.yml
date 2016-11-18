@@ -14,8 +14,8 @@ timezone:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://blog.iwnweb.com
 root: /
-permalink: :year/:month/:day/:title/
-permalink_defaults:
+permalink: :category/:english_title/
+permalink_defaults: :year/:month/:day/:title/
 
 # Directory
 source_dir: source
@@ -34,7 +34,8 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+# npm install https://github.com/CodeFalling/hexo-asset-image --save
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -73,4 +74,3 @@ deploy:
   repo: https://github.com/mouyong/mouyong.github.io.git
   branch: master
 
-creative_commons: by-nc-sa

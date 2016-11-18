@@ -6,5 +6,5 @@ node_modules/
 public/
 .deploy*/
 source/_drafts/*
-themes/next/*
+themes/next/
 .idea/
