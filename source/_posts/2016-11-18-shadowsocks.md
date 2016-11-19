@@ -31,28 +31,28 @@ CentOS:
 -------
 
 1. 命令行
-`ssserver -p 443 -k password -m aes-256-cfb`
+    `ssserver -p 443 -k password -m aes-256-cfb`
 
-要在后台运行：
-`sudo ssserver -p 443 -k password -m aes-256-cfb --user nobody -d start`
+    要在后台运行：
+    `sudo ssserver -p 443 -k password -m aes-256-cfb --user nobody -d start`
 
-要检查日志：
-`sudo less /var/log/shadowsocks.log`
+    要检查日志：
+    `sudo less /var/log/shadowsocks.log`
 
-通过 `-h` 参数查看所有选项。
+    通过 `-h` 参数查看所有选项。
 
 2. 配置文件
-```
-{
-    "server": "服务器 ip/域名 ",
-    "port_password": {
-        "端口": "密码"
-    },
-    "local_address": "127.0.0.1",
-    "localhost_port": 1080,
-    "method": "aes-256-cfb"
-}
-```
+    ```
+    {
+        "server": "服务器 ip/域名 ",
+        "port_password": {
+            "端口": "密码"
+        },
+        "local_address": "127.0.0.1",
+        "localhost_port": 1080,
+        "method": "aes-256-cfb"
+    }
+    ```
 
 * 启动
 `/usr/local/bin/ssserver -c /etc/ss.json --pid-file /var/run/shadowsocks.pid --log-file /var/log/shadowsocks.log -d start`
