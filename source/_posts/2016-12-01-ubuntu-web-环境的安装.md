@@ -25,4 +25,8 @@ english_title: ubuntu-web
 
 ## 安装 php 以及相关扩展
 
+### 这是 php7.1 的 ppa 源，如有需要，请自行添加
+
+#### `sudo add-apt-repository ppa:ondrej/php`
+
     sudo apt install php php-zip  php-xml php-mbstring php-redis php-mysql php-gd
