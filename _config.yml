@@ -70,8 +70,8 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  #repo: git@github.com:mouyong/mouyong.github.io.git
-  repo: https://github.com/mouyong/mouyong.github.io.git
+  repo: git@github.com:mouyong/mouyong.github.io.git
+  #repo: https://github.com/mouyong/mouyong.github.io.git
   #repo: git@git.wxcms.cn:future/test.git
   branch: master
 
