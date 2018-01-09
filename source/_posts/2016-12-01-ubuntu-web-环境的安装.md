@@ -1,21 +1,20 @@
 ---
 title: ubuntu web 环境的安装
 date: 2016-12-01 01:50:35
-categories: 环境搭建
+categories: 环境
 tags:
-- 工具
-- 环境搭建
+ - 环境
 english_title: ubuntu-web
 ---
 ## 安装 web 服务器
 
 ### *二者选一即可*
 
-#### 1. apache2
+#### apache2
 
     sudo apt install apache2
 
-#### 2. nginx
+#### nginx
 
     sudo apt install nginx
 

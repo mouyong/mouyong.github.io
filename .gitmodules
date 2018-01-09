@@ -1,0 +1,3 @@
+[submodule "themes/cafe"]
+	path = themes/cafe
+	url = https://github.com/giscafer/hexo-theme-cafe

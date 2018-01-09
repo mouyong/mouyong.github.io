@@ -1,7 +1,9 @@
 ---
 title: shadowsocks
-categories: 工具
-tags: 工具
+categories: 环境
+tags:
+ - 工具
+ - 环境
 date: 2016-11-18 14:59:21
 english_title: shadowsocks
 ---
