@@ -3,16 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 蜗牛的博客
+title: = - =
 subtitle:
-description: 蜗牛的博客
+description: = - =
 author:
 language: zh-Hans
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://blog.iwnweb.com
+url: https://blog.iwnweb.com
 root: /
 permalink: :category/:english_title/
 permalink_defaults: :year/:month/:day/:title/
@@ -20,15 +20,12 @@ permalink_defaults: :year/:month/:day/:title/
 # Directory
 source_dir: source
 public_dir: public
-tag_dir: tags
-archive_dir: archives
-category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
 
 # Writing
-new_post_name: :year-:month-:day-:title.md # File name of new posts
+new_post_name: :title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
