@@ -1,6 +1,16 @@
-## Laravel phpunit 单元测试配置
+---
+title: Laravel PHPUnit 配置及美化
+date: 2018-07-12 20:05:35
+categories: 开发
+tags:
+  - 开发
+  - PHP
+  - Laravel
 
-### 美化 phpunit 输出
+english_title: Laravel-PHPUnit-configuration-and-beautification
+---
+
+## 美化 phpunit 输出
 
 前往 [GitHub](https://github.com/mikeerickson/phpunit-pretty-result-printer)
 
@@ -15,7 +25,7 @@
 </phpunit>
 ```
 
-### 修改配置
+## 修改配置
 
 编辑 phpunit.xml
 

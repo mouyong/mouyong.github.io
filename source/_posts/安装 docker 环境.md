@@ -1,3 +1,16 @@
+---
+title: 安装 docker 环境
+date: 2018-08-13 12:57:20
+categories: 环境
+tags:
+  - docker
+  - 服务器
+
+english_title: Installing-docker-environment
+---
+
+# 安装 docker 环境
+
 ## 安装
 
 - [官方文档](https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-docker-ce)
@@ -46,7 +59,7 @@ sudo apt-get install docker-ce
 3. 安装指定版本的 docker-ce
 
   - 查看仓库中可用的版本
-  
+
 ```
 apt-cache madison docker-ce
 
