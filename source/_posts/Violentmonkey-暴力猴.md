@@ -46,7 +46,7 @@ document.querySelectorAll("input[name*='events']").forEach(function (_) {
 });
 ```
 
-所有的元都必须为以下格式
+所有的元数据都必须为以下格式
 ```
 // ==UserScript==
 // @key value
