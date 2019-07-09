@@ -52,6 +52,8 @@ element-ui 是一个不错的前端框架，可以帮助开发者在开发中快
 }
 ```
 
+点击[查看](https://github.com/ElemeFE/element/issues/16167#issuecomment-506598890)官方 issue 讨论
+
 ## 解决
 
 最后我选择了 @beibeijerry 提到的方式进行处理。
