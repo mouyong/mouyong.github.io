@@ -20,7 +20,7 @@ Protocol Buffers 是类似于 XML、JSON 的一种可扩展性描述语言，它
 
 于今日今时（2019-08-17 16:37），Protocol Buffers 协议第二版已支持生成 Java, Python, Objective-C, C++ 等语言的源代码。在第三版协议中，新增了对 Dart, Go, Ruby, C# 等语言的源代码生成支持（更多语言详见参考网页）。以后也将陆陆续续地新增对其他语言的支持。
 
-## 附录
+## 4. 附录
 
 协议引导概览: https://developers.google.cn/protocol-buffers/docs/overview
 参考网页：https://developers.google.cn/protocol-buffers/docs/reference/overview
