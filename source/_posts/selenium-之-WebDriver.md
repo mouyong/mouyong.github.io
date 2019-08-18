@@ -23,19 +23,19 @@ Selenium 是一个用于 Web 应用程序测试的工具，Selenium 测试直接
 
 > 工欲善其事，必先利其器。-- 孔子（春秋）《论语・卫灵公》
 
-1. 下载
+### 1. 下载
 
 打开浏览器，访问 [selenium 下载页:https://docs.seleniumhq.org/download/](https://docs.seleniumhq.org/download/) ，滑动鼠标来到 Third Party Drivers, Bindings, and Plugins 区块，下载自己浏览器对应的 Selenium webdriver 驱动。
 
 ![Google Chrome webdriver 下载](webdriver-download.gif)
 
-2. 解压并配置环境变量
+### 2. 解压并配置环境变量
 
 将 webdriver 解压至 c:\webdrivers 目录中，然后在环境变量 PATH 中添加 C:\webdrivers 。
 
 ![Google Chrome webdriver 解压并配置环境变量 PATH](webdriver-path.gif)
 
-3. 验证安装结果
+### 3. 验证安装结果
 
 打开命令行 cmd，输入 `chromedriver.exe --version`，查看是否有版本输出。
 
