@@ -6,8 +6,6 @@ tags: Protocol-Buffers
 english_title: Introduction-to-Protocol-Buffers
 ---
 
-# Protocol Buffers 简介
-
 ## 1. 什么是 Protocol Buffers?
 
 Protocol Buffers (ProtocolBuffer/protobuf) 是 Google 公司开发的一种数据描述语言.

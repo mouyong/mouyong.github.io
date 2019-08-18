@@ -6,8 +6,6 @@ tags: Protocol-Buffers
 english_title: Laravel-Project-Creation-for-Protocol-Buffers-Applications
 ---
 
-# Protocol Buffers 应用之 Laravel 项目创建
-
 ## 前言
 
 经过前面 2 篇文章的铺垫，我们对 Protocol Buffers 已经有了一个初步的了解。接下来写点东西来巩固和加强我们的理解。

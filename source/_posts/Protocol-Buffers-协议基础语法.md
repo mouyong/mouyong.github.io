@@ -6,8 +6,6 @@ tags: Protocol-Buffers
 english_title: Protocol-Buffers-Protocol-Basic-Grammar
 ---
 
-# Protocol Buffers 协议基础语法
-
 ## 前言
 
 继上一节介绍了 Protocol Buffers 的相关信息后，我们了解到协议的一些特性，优势。
