@@ -36,11 +36,18 @@ acme.sh  --installcert  -d  <domain>.com   \
         --reloadcmd  "service nginx force-reload"
 ```
 
-## 4. 更新 acme.sh
+## 4. 创建定时任务，每日检查更新
+
+Cron 示例
+```
+0 0 * * * "/home/user/.acme.sh"/acme.sh --cron --home "/home/user/.acme.sh" > /dev/null
+```
+
+## 5. 更新 acme.sh
 
 `acme.sh  --upgrade  --auto-upgrade`
 
-## 5. http 跳转 https
+## 6. http 跳转 https
 
 ![http redirect to https](/images/http2https.png)
 
@@ -50,13 +57,13 @@ acme.sh  --installcert  -d  <domain>.com   \
     }
 ```
 
-## 6. nginx https 配置
+## 7. nginx https 配置
 
 ```
     listen 443 ssl;
 
-    ssl_certificate /etc/nginx/ssl/fullchain.cer;
-    ssl_certificate_key /etc/nginx/ssl/www.realomics.cn.key;
+    ssl_certificate /etc/nginx/ssl/<domain>.cer;
+    ssl_certificate_key /etc/nginx/ssl/<domain>.key;
     ssl_session_timeout 5m;
     ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
     ssl_ciphers ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv2:+EXP;
@@ -67,7 +74,7 @@ acme.sh  --installcert  -d  <domain>.com   \
     }
 ```
 
-## 7. 验证 ssl 配置安全性
+## 8. 验证 ssl 配置安全性
 
 `https://www.seoptimer.com/your-domain.com`
 
