@@ -32,7 +32,7 @@ english_title: Acme.sh-apply-for-https-certificate-practice
 ```
 acme.sh  --installcert  -d  <domain>.com   \
         --key-file   /etc/nginx/ssl/<domain>.key \
-        --fullchain-file /etc/nginx/ssl/fullchain.cer \
+        --fullchain-file /etc/nginx/ssl/<domain>.cer \
         --reloadcmd  "service nginx force-reload"
 ```
 
@@ -54,7 +54,7 @@ acme.sh  --installcert  -d  <domain>.com   \
 
 ```
     listen 443 ssl;
-    
+
     ssl_certificate /etc/nginx/ssl/fullchain.cer;
     ssl_certificate_key /etc/nginx/ssl/www.realomics.cn.key;
     ssl_session_timeout 5m;
