@@ -10,7 +10,7 @@ english_title: build-elastic-search-environment
 
 1. 上传编写好的 docker 版 elasticsearch.zip 至服务器
 
-下载地址：[elasticsearch.zip](elasticsearch.zip)
+下载地址：[elasticsearch.zip](/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/build-elastic-search-environment/elasticsearch.zip)
 
 `scp elasticsearch.zip root@servername:/usr/local/src`
 
