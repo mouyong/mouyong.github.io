@@ -3,8 +3,8 @@ title: 一、创建一个 kubernetes 集群
 date: 2019-12-20 14:51:12
 categories: k8s
 tags:
-- k8s
-- 运维
+    - k8s
+    - 运维
 english_title: Create-a-kubernetes-cluster
 ---
 [前提摘要](https://kubernetes.io/docs/tutorials/kubernetes-basics/create-cluster/cluster-intro/)
