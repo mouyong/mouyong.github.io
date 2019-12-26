@@ -13,6 +13,14 @@ english_title: Installing-docker-environment
 
 ## 安装
 
+### 脚本安装
+
+```
+sudo curl -sSL https://get.docker.com | sh
+```
+
+### apt 安装
+
 - [官方文档](https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-docker-ce)
 
 - [阿里云文档](https://help.aliyun.com/document_detail/60742.html?spm=5176.11065259.1996646101.searchclickresult.728f232cP3DvSO)
@@ -20,7 +28,7 @@ english_title: Installing-docker-environment
 安装包以允许仓库使用 https
 
 ```
-sudo apt-get install \
+sudo apt-get install -y \
   apt-transport-https \
   ca-certificates \
   curl \
@@ -30,7 +38,7 @@ sudo apt-get install \
 添加官方 GPG key
 
 ```
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 ```
 
 设置稳定版的仓库源
@@ -100,9 +108,9 @@ chmod +x /usr/local/bin/docker-compose
 
 - 阿里云
 
-> [容器进行服务控制台](https://cr.console.aliyun.com/?spm=a2c4g.11186623.2.3.s2em6W&accounttraceid=34974d1e-62c7-4738-946c-2ca5345fa292#/imageList)
+> [容器进行服务控制台](https://cr.console.aliyun.com/)
 >
-> [镜像加速器](https://cr.console.aliyun.com/?spm=a2c4g.11186623.2.3.s2em6W&accounttraceid=34974d1e-62c7-4738-946c-2ca5345fa292#/accelerator)
+> [镜像加速器](https://cr.console.aliyun.com/undefined/instances/mirrors)
 
 ```
 sudo mkdir -p /etc/docker
