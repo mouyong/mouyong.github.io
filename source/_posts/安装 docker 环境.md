@@ -108,7 +108,8 @@ chmod +x /usr/local/bin/docker-compose
 sudo mkdir -p /etc/docker
 sudo tee /etc/docker/daemon.json <<-'EOF'
 {
-  "registry-mirrors": ["你的 Docker 加速地址"]
+  "registry-mirrors": ["你的镜像加速地址"],
+  "exec-opts": [ "native.cgroupdriver=systemd" ]
 }
 EOF
 sudo systemctl daemon-reload

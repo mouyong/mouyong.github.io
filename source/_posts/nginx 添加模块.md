@@ -1,3 +1,14 @@
+---
+title: nginx 添加模块
+date: 2019-08-13 12:57:20
+categories: nginx
+tags:
+  - nginx
+  - 服务器
+
+english_title: Nginx-add-module
+---
+
 ## 进入指定源码目录
 cd /usr/src/
 
