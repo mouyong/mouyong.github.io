@@ -611,33 +611,6 @@
     
     
     <entry>
-      <title>微信环境配置过程</title>
-      <link href="/huan-jing/wechat-environment-configuration-process/"/>
-      <url>/huan-jing/wechat-environment-configuration-process/</url>
-      
-        <content type="html"><![CDATA[<h2 id="微信公众平台沙盒登录"><a href="#微信公众平台沙盒登录" class="headerlink" title="微信公众平台沙盒登录"></a>微信公众平台沙盒登录</h2><p>登录地址: <a href="http://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login" target="_blank" rel="noopener">http://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login</a></p><h2 id="配置过程"><a href="#配置过程" class="headerlink" title="配置过程"></a>配置过程</h2><ul><li>启动内网穿透工具</li><li>扫码登录后获取 appID、appsecret 填入项目中</li><li>修改微信「网页服务 - 网页帐号 - 网页授权获取用户基本信息」回调地址为内网穿透工具生成的地址（注：不需要协议前缀，否则微信授权会提示「redirect_uri 参数错误」，每次重新运行内网工具的时候，需要重新执行本步骤）</li><li>到 微信环境（微信开发者工具，模拟器，真机）中进行访问，确认配置结果</li><li>修改「JS接口安全域名」为内网穿透地址，如果不需要用户授权的，修改为本地开发使用的域名即可（注：不需要协议前缀，否则 jssdk 会返回 「config:fail,Error: invalid url domain」）</li><li><a href="https://www.getpostman.com/collections/6c7f7cb14fdb22933e6e" target="_blank" rel="noopener">postman 模拟获取用户相关信息接口</a></li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
-      <categories>
-          
-          <category> 环境 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 前端 </tag>
-            
-            <tag> 微信 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>安装 Sentry 服务</title>
       <link href="/huan-jing/install-sentry-services/"/>
       <url>/huan-jing/install-sentry-services/</url>
@@ -657,6 +630,33 @@
             <tag> 环境 </tag>
             
             <tag> 服务器 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>微信环境配置过程</title>
+      <link href="/huan-jing/wechat-environment-configuration-process/"/>
+      <url>/huan-jing/wechat-environment-configuration-process/</url>
+      
+        <content type="html"><![CDATA[<h2 id="微信公众平台沙盒登录"><a href="#微信公众平台沙盒登录" class="headerlink" title="微信公众平台沙盒登录"></a>微信公众平台沙盒登录</h2><p>登录地址: <a href="http://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login" target="_blank" rel="noopener">http://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login</a></p><h2 id="配置过程"><a href="#配置过程" class="headerlink" title="配置过程"></a>配置过程</h2><ul><li>启动内网穿透工具</li><li>扫码登录后获取 appID、appsecret 填入项目中</li><li>修改微信「网页服务 - 网页帐号 - 网页授权获取用户基本信息」回调地址为内网穿透工具生成的地址（注：不需要协议前缀，否则微信授权会提示「redirect_uri 参数错误」，每次重新运行内网工具的时候，需要重新执行本步骤）</li><li>到 微信环境（微信开发者工具，模拟器，真机）中进行访问，确认配置结果</li><li>修改「JS接口安全域名」为内网穿透地址，如果不需要用户授权的，修改为本地开发使用的域名即可（注：不需要协议前缀，否则 jssdk 会返回 「config:fail,Error: invalid url domain」）</li><li><a href="https://www.getpostman.com/collections/6c7f7cb14fdb22933e6e" target="_blank" rel="noopener">postman 模拟获取用户相关信息接口</a></li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 环境 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> 微信 </tag>
             
         </tags>
       
