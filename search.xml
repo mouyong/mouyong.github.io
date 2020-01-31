@@ -584,33 +584,6 @@
     
     
     <entry>
-      <title>安装 Sentry 服务</title>
-      <link href="/huan-jing/install-sentry-services/"/>
-      <url>/huan-jing/install-sentry-services/</url>
-      
-        <content type="html"><![CDATA[<h1 id="安装-Sentry-服务"><a href="#安装-Sentry-服务" class="headerlink" title="安装 Sentry 服务"></a>安装 Sentry 服务</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ul><li><a href="https://docs.sentry.io/server/installation/docker/" target="_blank" rel="noopener">官方文档</a></li></ul><p>依赖</p><blockquote><p>Docker version 1.10+</p></blockquote><p>克隆</p><p><code>git clone https://github.com/getsentry/onpremise</code></p><p>生成镜像</p><pre><code>cd onpremisemkdir -p data/{sentry,postgres}docker-compose builddocker-compose run --rm web config generate-secret-key # 生成 key，将它添加到 docker-compose.yml 中的 SENTRY_SECRET_KEYdocker-compose run --rm web upgradedocker-compose up -d</code></pre><p>访问 <code>localhost:9000</code></p><p><strong>如果打开后提示这个。确认下是否存在以下 issue 所描述的问题</strong></p><p><a href="https://github.com/getsentry/sentry/issues/8862#issuecomment-400807159" target="_blank" rel="noopener">Oops! Something went wrong.</a></p><pre><code>docker-compose run --rm web shellfrom sentry.models import Projectfrom sentry.receivers.core import create_default_projectscreate_default_projects([Project])</code></pre><pre><code>postgres_1   | ERROR:  function sentry_increment_project_counter(integer, integer) does not exist at character 25postgres_1   | HINT:  No function matches the given name and argument types. You might need to add explicit type casts.postgres_1   | STATEMENT:postgres_1   |                  select sentry_increment_project_counter(1, 1)postgres_1   |# 参考 https://github.com/getsentry/sentry/issues/9270#issuecomment-409577582docker exec -it onpremise_postgres_1 bashpsql -h 127.0.0.1 -d postgres -U postgrescreate or replace function sentry_increment_project_counter( project bigint, delta int) returns int as $$ declare new_val int; begin loop update sentry_projectcounter set value = value + delta where project_id = project returning value into new_val; if found then return new_val; end if; begin insert into sentry_projectcounter(project_id, value) values (project, delta) returning value into new_val; return new_val; exception when unique_violation then end; end loop; end $$ language plpgsql;</code></pre><p>升级</p><pre><code>docker-compose builddocker-compose run --rm web upgradedocker-compose up -d</code></pre><h2 id="ecs-放行端口"><a href="#ecs-放行端口" class="headerlink" title="ecs 放行端口"></a>ecs 放行端口</h2><p><a href="ecs.console.aliyun.com">ecs 控制台</a> -&gt; 安全组 -&gt; 配置规则（选择实例）</p><pre><code>端口号/端口号 # 端口范围0.0.0.0/0 # 授权对象</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
-      <categories>
-          
-          <category> 环境 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 环境 </tag>
-            
-            <tag> 服务器 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>安装 docker 环境</title>
       <link href="/huan-jing/installing-docker-environment/"/>
       <url>/huan-jing/installing-docker-environment/</url>
@@ -657,6 +630,33 @@
             <tag> 前端 </tag>
             
             <tag> 微信 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>安装 Sentry 服务</title>
+      <link href="/huan-jing/install-sentry-services/"/>
+      <url>/huan-jing/install-sentry-services/</url>
+      
+        <content type="html"><![CDATA[<h1 id="安装-Sentry-服务"><a href="#安装-Sentry-服务" class="headerlink" title="安装 Sentry 服务"></a>安装 Sentry 服务</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ul><li><a href="https://docs.sentry.io/server/installation/docker/" target="_blank" rel="noopener">官方文档</a></li></ul><p>依赖</p><blockquote><p>Docker version 1.10+</p></blockquote><p>克隆</p><p><code>git clone https://github.com/getsentry/onpremise</code></p><p>生成镜像</p><pre><code>cd onpremisemkdir -p data/{sentry,postgres}docker-compose builddocker-compose run --rm web config generate-secret-key # 生成 key，将它添加到 docker-compose.yml 中的 SENTRY_SECRET_KEYdocker-compose run --rm web upgradedocker-compose up -d</code></pre><p>访问 <code>localhost:9000</code></p><p><strong>如果打开后提示这个。确认下是否存在以下 issue 所描述的问题</strong></p><p><a href="https://github.com/getsentry/sentry/issues/8862#issuecomment-400807159" target="_blank" rel="noopener">Oops! Something went wrong.</a></p><pre><code>docker-compose run --rm web shellfrom sentry.models import Projectfrom sentry.receivers.core import create_default_projectscreate_default_projects([Project])</code></pre><pre><code>postgres_1   | ERROR:  function sentry_increment_project_counter(integer, integer) does not exist at character 25postgres_1   | HINT:  No function matches the given name and argument types. You might need to add explicit type casts.postgres_1   | STATEMENT:postgres_1   |                  select sentry_increment_project_counter(1, 1)postgres_1   |# 参考 https://github.com/getsentry/sentry/issues/9270#issuecomment-409577582docker exec -it onpremise_postgres_1 bashpsql -h 127.0.0.1 -d postgres -U postgrescreate or replace function sentry_increment_project_counter( project bigint, delta int) returns int as $$ declare new_val int; begin loop update sentry_projectcounter set value = value + delta where project_id = project returning value into new_val; if found then return new_val; end if; begin insert into sentry_projectcounter(project_id, value) values (project, delta) returning value into new_val; return new_val; exception when unique_violation then end; end loop; end $$ language plpgsql;</code></pre><p>升级</p><pre><code>docker-compose builddocker-compose run --rm web upgradedocker-compose up -d</code></pre><h2 id="ecs-放行端口"><a href="#ecs-放行端口" class="headerlink" title="ecs 放行端口"></a>ecs 放行端口</h2><p><a href="ecs.console.aliyun.com">ecs 控制台</a> -&gt; 安全组 -&gt; 配置规则（选择实例）</p><pre><code>端口号/端口号 # 端口范围0.0.0.0/0 # 授权对象</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 环境 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 环境 </tag>
+            
+            <tag> 服务器 </tag>
             
         </tags>
       
