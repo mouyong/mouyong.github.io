@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>= - =</title>
+  
+  <subtitle>= - =</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://blog.iwnweb.com/"/>
+  <updated>2020-01-31T05:24:11.014Z</updated>
+  <id>https://blog.iwnweb.com/</id>
+  
+  <author>
+    <name>牟勇</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://blog.iwnweb.com/uncategorized/undefined/"/>
+    <id>https://blog.iwnweb.com/uncategorized/undefined/</id>
+    <published>2020-01-31T05:24:11.014Z</published>
+    <updated>2020-01-31T05:24:11.014Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>搭建 k8s 集群</title>
+    <link href="https://blog.iwnweb.com/k8s/build-k8s-cluster/"/>
+    <id>https://blog.iwnweb.com/k8s/build-k8s-cluster/</id>
+    <published>2019-12-26T10:42:44.000Z</published>
+    <updated>2020-01-31T05:46:37.715Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;# 使得 apt 支持 ssl 传输
+sudo apt-get update &amp;amp;&amp;amp; sudo
+        
+      
+    
+    </summary>
+    
+    
+      <category term="k8s" scheme="https://blog.iwnweb.com/categories/k8s/"/>
+    
+    
+      <category term="环境" scheme="https://blog.iwnweb.com/tags/%E7%8E%AF%E5%A2%83/"/>
+    
+      <category term="k8s" scheme="https://blog.iwnweb.com/tags/k8s/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>树莓派装机记录</title>
+    <link href="https://blog.iwnweb.com/shu-mei-pai/raspberry-pie-installation-record/"/>
+    <id>https://blog.iwnweb.com/shu-mei-pai/raspberry-pie-installation-record/</id>
+    <published>2019-12-26T10:37:26.000Z</published>
+    <updated>2020-01-31T05:46:37.703Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;刻录系统&quot;&gt;&lt;a href=&quot;#刻录系统&quot; class=&quot;headerlink&quot; title=&quot;刻录系统&quot;&gt;&lt;/a&gt;刻录系统&lt;/h2&gt;&lt;p&gt;下载系统 zip 压缩包 并解压 img 镜像&lt;br&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="树莓派" scheme="https://blog.iwnweb.com/categories/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
+    
+    
+      <category term="树莓派" scheme="https://blog.iwnweb.com/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>六、更新应用</title>
+    <link href="https://blog.iwnweb.com/k8s/update-app/"/>
+    <id>https://blog.iwnweb.com/k8s/update-app/</id>
+    <published>2019-12-20T07:14:21.000Z</published>
+    <updated>2020-01-31T05:46:37.701Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;更新应用版本&quot;&gt;&lt;a href=&quot;#更新应用版本&quot; class=&quot;headerlink&quot; title=&quot;更新应用版本&quot;&gt;&lt;/a&gt;更新应用版本&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;查看部署&lt;br&gt;&lt;code&gt;kubectl get
+        
+      
+    
+    </summary>
+    
+    
+      <category term="k8s" scheme="https://blog.iwnweb.com/categories/k8s/"/>
+    
+    
+      <category term="k8s" scheme="https://blog.iwnweb.com/tags/k8s/"/>
+    
+      <category term="运维" scheme="https://blog.iwnweb.com/tags/%E8%BF%90%E7%BB%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>五、扩展应用程序</title>
+    <link href="https://blog.iwnweb.com/k8s/extend-application/"/>
+    <id>https://blog.iwnweb.com/k8s/extend-application/</id>
+    <published>2019-12-20T07:10:04.000Z</published>
+    <updated>2020-01-31T05:46:37.690Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;扩展部署&quot;&gt;&lt;a href=&quot;#扩展部署&quot; class=&quot;headerlink&quot; title=&quot;扩展部署&quot;&gt;&lt;/a&gt;扩展部署&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;查看部署&lt;br&gt;&lt;code&gt;kubectl get
+        
+      
+    
+    </summary>
+    
+    
+      <category term="k8s" scheme="https://blog.iwnweb.com/categories/k8s/"/>
+    
+    
+      <category term="k8s" scheme="https://blog.iwnweb.com/tags/k8s/"/>
+    
+      <category term="运维" scheme="https://blog.iwnweb.com/tags/%E8%BF%90%E7%BB%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>四、公开的暴露应用程序</title>
+    <link href="https://blog.iwnweb.com/k8s/exposed-applications/"/>
+    <id>https://blog.iwnweb.com/k8s/exposed-applications/</id>
+    <published>2019-12-20T07:05:40.000Z</published>
+    <updated>2020-01-31T05:46:37.689Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;创建一个新服务&quot;&gt;&lt;a href=&quot;#创建一个新服务&quot; class=&quot;headerlink&quot; title=&quot;创建一个新服务&quot;&gt;&lt;/a&gt;创建一个新服务&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;查看当前的 PODS 信息&lt;br&gt;&lt;code&gt;kubectl get
+        
+      
+    
+    </summary>
+    
+    
+      <category term="k8s" scheme="https://blog.iwnweb.com/categories/k8s/"/>
+    
+    
+      <category term="k8s" scheme="https://blog.iwnweb.com/tags/k8s/"/>
+    
+      <category term="运维" scheme="https://blog.iwnweb.com/tags/%E8%BF%90%E7%BB%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>三、探索应用</title>
+    <link href="https://blog.iwnweb.com/k8s/exploration-and-application/"/>
+    <id>https://blog.iwnweb.com/k8s/exploration-and-application/</id>
+    <published>2019-12-20T07:01:56.000Z</published>
+    <updated>2020-01-31T05:46:37.719Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;检查应用程序配置&quot;&gt;&lt;a href=&quot;#检查应用程序配置&quot; class=&quot;headerlink&quot; title=&quot;检查应用程序配置&quot;&gt;&lt;/a&gt;检查应用程序配置&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;查看当前 Pods&lt;br&gt;&lt;code&gt;kubectl get
+        
+      
+    
+    </summary>
+    
+    
+      <category term="k8s" scheme="https://blog.iwnweb.com/categories/k8s/"/>
+    
+    
+      <category term="k8s" scheme="https://blog.iwnweb.com/tags/k8s/"/>
+    
+      <category term="运维" scheme="https://blog.iwnweb.com/tags/%E8%BF%90%E7%BB%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>二、部署一个应用</title>
+    <link href="https://blog.iwnweb.com/k8s/deploy-an-application/"/>
+    <id>https://blog.iwnweb.com/k8s/deploy-an-application/</id>
+    <published>2019-12-20T06:58:57.000Z</published>
+    <updated>2020-01-31T05:46:37.727Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;https://kubernetes.io/docs/tutorials/kubernetes-basics/deploy-app/deploy-intro/&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="k8s" scheme="https://blog.iwnweb.com/categories/k8s/"/>
+    
+    
+      <category term="k8s" scheme="https://blog.iwnweb.com/tags/k8s/"/>
+    
+      <category term="运维" scheme="https://blog.iwnweb.com/tags/%E8%BF%90%E7%BB%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一、创建一个 kubernetes 集群</title>
+    <link href="https://blog.iwnweb.com/k8s/create-a-kubernetes-cluster/"/>
+    <id>https://blog.iwnweb.com/k8s/create-a-kubernetes-cluster/</id>
+    <published>2019-12-20T06:51:12.000Z</published>
+    <updated>2020-01-31T05:46:37.582Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;https://kubernetes.io/docs/tutorials/kubernetes-basics/create-cluster/cluster-intro/&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="k8s" scheme="https://blog.iwnweb.com/categories/k8s/"/>
+    
+    
+      <category term="k8s" scheme="https://blog.iwnweb.com/tags/k8s/"/>
+    
+      <category term="运维" scheme="https://blog.iwnweb.com/tags/%E8%BF%90%E7%BB%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>搭建 elasticsearch 环境</title>
+    <link href="https://blog.iwnweb.com/sou-suo-yin-qing/build-elastic-search-environment/"/>
+    <id>https://blog.iwnweb.com/sou-suo-yin-qing/build-elastic-search-environment/</id>
+    <published>2019-11-01T22:42:54.000Z</published>
+    <updated>2020-01-31T05:46:37.767Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;搭建步骤&quot;&gt;&lt;a href=&quot;#搭建步骤&quot; class=&quot;headerlink&quot; title=&quot;搭建步骤&quot;&gt;&lt;/a&gt;搭建步骤&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;上传编写好的 docker 版 elasticsearch.zip
+        
+      
+    
+    </summary>
+    
+    
+      <category term="搜索引擎" scheme="https://blog.iwnweb.com/categories/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/"/>
+    
+    
+      <category term="环境、搜索引擎" scheme="https://blog.iwnweb.com/tags/%E7%8E%AF%E5%A2%83%E3%80%81%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>golang 创建 tcp 服务器</title>
+    <link href="https://blog.iwnweb.com/kai-fa/golang-creates-tcp-server/"/>
+    <id>https://blog.iwnweb.com/kai-fa/golang-creates-tcp-server/</id>
+    <published>2019-08-18T07:26:34.000Z</published>
+    <updated>2020-01-31T05:46:37.619Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;直接放代码&quot;&gt;&lt;a href=&quot;#直接放代码&quot; class=&quot;headerlink&quot; title=&quot;直接放代码&quot;&gt;&lt;/a&gt;直接放代码&lt;/h2&gt;&lt;h3 id=&quot;1-服务器&quot;&gt;&lt;a href=&quot;#1-服务器&quot; class=&quot;headerlink&quot; title=&quot;1.
+        
+      
+    
+    </summary>
+    
+    
+      <category term="开发" scheme="https://blog.iwnweb.com/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="golang" scheme="https://blog.iwnweb.com/tags/golang/"/>
+    
+      <category term="TCP" scheme="https://blog.iwnweb.com/tags/TCP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Selenium 之 WebDriver</title>
+    <link href="https://blog.iwnweb.com/ce-shi/webdriver-of-selenium/"/>
+    <id>https://blog.iwnweb.com/ce-shi/webdriver-of-selenium/</id>
+    <published>2019-08-18T01:27:41.000Z</published>
+    <updated>2020-01-31T05:46:37.733Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="测试" scheme="https://blog.iwnweb.com/categories/%E6%B5%8B%E8%AF%95/"/>
+    
+    
+      <category term="Selenium" scheme="https://blog.iwnweb.com/tags/Selenium/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Protocol Buffers 应用之 Laravel 项目创建</title>
+    <link href="https://blog.iwnweb.com/kai-fa/laravel-project-creation-for-protocol-buffers-applications/"/>
+    <id>https://blog.iwnweb.com/kai-fa/laravel-project-creation-for-protocol-buffers-applications/</id>
+    <published>2019-08-17T18:03:18.000Z</published>
+    <updated>2020-01-31T05:46:37.744Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;经过前面 2 篇文章的铺垫，我们对 Protocol Buffers
+        
+      
+    
+    </summary>
+    
+    
+      <category term="开发" scheme="https://blog.iwnweb.com/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Protocol-Buffers" scheme="https://blog.iwnweb.com/tags/Protocol-Buffers/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Protocol Buffers 协议基础语法</title>
+    <link href="https://blog.iwnweb.com/kai-fa/protocol-buffers-protocol-basic-grammar/"/>
+    <id>https://blog.iwnweb.com/kai-fa/protocol-buffers-protocol-basic-grammar/</id>
+    <published>2019-08-17T16:31:57.000Z</published>
+    <updated>2020-01-31T05:46:37.679Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;继上一节介绍了 Protocol Buffers 的相关信息后，我们了解到协议的一些特性，优势。&lt;/p&gt;
+&lt;p&gt;接下来让我们简单学习下
+        
+      
+    
+    </summary>
+    
+    
+      <category term="开发" scheme="https://blog.iwnweb.com/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Protocol-Buffers" scheme="https://blog.iwnweb.com/tags/Protocol-Buffers/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Protocol Buffers 简介</title>
+    <link href="https://blog.iwnweb.com/kai-fa/introduction-to-protocol-buffers/"/>
+    <id>https://blog.iwnweb.com/kai-fa/introduction-to-protocol-buffers/</id>
+    <published>2019-08-17T15:59:58.000Z</published>
+    <updated>2020-01-31T05:46:37.702Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-什么是-Protocol-Buffers&quot;&gt;&lt;a href=&quot;#1-什么是-Protocol-Buffers&quot; class=&quot;headerlink&quot; title=&quot;1. 什么是 Protocol Buffers?&quot;&gt;&lt;/a&gt;1. 什么是 Protocol
+        
+      
+    
+    </summary>
+    
+    
+      <category term="开发" scheme="https://blog.iwnweb.com/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Protocol-Buffers" scheme="https://blog.iwnweb.com/tags/Protocol-Buffers/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>nginx 添加模块</title>
+    <link href="https://blog.iwnweb.com/nginx/nginx-add-module/"/>
+    <id>https://blog.iwnweb.com/nginx/nginx-add-module/</id>
+    <published>2019-08-13T04:57:20.000Z</published>
+    <updated>2020-01-31T05:46:37.718Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;进入指定源码目录&quot;&gt;&lt;a href=&quot;#进入指定源码目录&quot; class=&quot;headerlink&quot; title=&quot;进入指定源码目录&quot;&gt;&lt;/a&gt;进入指定源码目录&lt;/h2&gt;&lt;p&gt;cd /usr/src/&lt;/p&gt;
+&lt;h2 id=&quot;获取-nginx-源码&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="nginx" scheme="https://blog.iwnweb.com/categories/nginx/"/>
+    
+    
+      <category term="nginx" scheme="https://blog.iwnweb.com/tags/nginx/"/>
+    
+      <category term="服务器" scheme="https://blog.iwnweb.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>搭建 OpenVpn</title>
+    <link href="https://blog.iwnweb.com/gong-ju/build-openvpn/"/>
+    <id>https://blog.iwnweb.com/gong-ju/build-openvpn/</id>
+    <published>2019-07-29T08:45:45.000Z</published>
+    <updated>2020-01-31T05:46:37.745Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;注：当选择 DNS 时，请尽量选择 2 ~ 4 的值，原因见：&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="工具" scheme="https://blog.iwnweb.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="工具" scheme="https://blog.iwnweb.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>单片机的小笔记</title>
+    <link href="https://blog.iwnweb.com/bi-ji/small-notes-of-single-chip-microcomputer/"/>
+    <id>https://blog.iwnweb.com/bi-ji/small-notes-of-single-chip-microcomputer/</id>
+    <published>2019-07-09T12:24:21.000Z</published>
+    <updated>2020-01-31T05:46:37.769Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;笔记&quot;&gt;&lt;a href=&quot;#笔记&quot; class=&quot;headerlink&quot; title=&quot;笔记&quot;&gt;&lt;/a&gt;笔记&lt;/h2&gt;&lt;h3 id=&quot;2-1-单片机内部资源&quot;&gt;&lt;a href=&quot;#2-1-单片机内部资源&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="笔记" scheme="https://blog.iwnweb.com/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://blog.iwnweb.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Violentmonkey 暴力猴的使用</title>
+    <link href="https://blog.iwnweb.com/gong-ju/violentmonkey/"/>
+    <id>https://blog.iwnweb.com/gong-ju/violentmonkey/</id>
+    <published>2019-07-09T01:20:21.000Z</published>
+    <updated>2020-01-31T05:46:37.761Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;Violentmonkey -
+        
+      
+    
+    </summary>
+    
+    
+      <category term="工具" scheme="https://blog.iwnweb.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="脚本" scheme="https://blog.iwnweb.com/tags/%E8%84%9A%E6%9C%AC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>element-ui 表格无限抖动问题及解决</title>
+    <link href="https://blog.iwnweb.com/kai-fa/infinite-jitter-of-element-ui-table-and-its-solution/"/>
+    <id>https://blog.iwnweb.com/kai-fa/infinite-jitter-of-element-ui-table-and-its-solution/</id>
+    <published>2019-07-03T05:14:14.000Z</published>
+    <updated>2020-01-31T05:46:37.730Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h2&gt;&lt;p&gt;element-ui 是一个不错的前端框架，可以帮助开发者在开发中快速的完成需求。&lt;br&gt;在开发中，我们的前端 UI
+        
+      
+    
+    </summary>
+    
+    
+      <category term="开发" scheme="https://blog.iwnweb.com/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="前端" scheme="https://blog.iwnweb.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+</feed>
