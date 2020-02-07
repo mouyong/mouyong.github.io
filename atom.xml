@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.iwnweb.com/"/>
-  <updated>2020-01-31T05:46:37.715Z</updated>
+  <updated>2020-02-07T02:46:56.184Z</updated>
   <id>https://blog.iwnweb.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>疫情下的远程办公</title>
+    <link href="https://blog.iwnweb.com/ge-ren/undefined/"/>
+    <id>https://blog.iwnweb.com/ge-ren/undefined/</id>
+    <published>2020-02-07T02:39:12.000Z</published>
+    <updated>2020-02-07T02:46:56.184Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;疫情下的远程办公&quot;&gt;&lt;a href=&quot;#疫情下的远程办公&quot; class=&quot;headerlink&quot; title=&quot;疫情下的远程办公&quot;&gt;&lt;/a&gt;疫情下的远程办公&lt;/h1&gt;&lt;h2 id=&quot;前情摘要&quot;&gt;&lt;a href=&quot;#前情摘要&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="个人" scheme="https://blog.iwnweb.com/categories/%E4%B8%AA%E4%BA%BA/"/>
+    
+    
+      <category term="远程" scheme="https://blog.iwnweb.com/tags/%E8%BF%9C%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>搭建 k8s 集群</title>
@@ -552,41 +579,6 @@ sudo apt-get update &amp;amp;&amp;amp; sudo
     
     
       <category term="前端" scheme="https://blog.iwnweb.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>acme.sh 申请 https 证书实践</title>
-    <link href="https://blog.iwnweb.com/huan-jing/acme.sh-apply-for-https-certificate-practice/"/>
-    <id>https://blog.iwnweb.com/huan-jing/acme.sh-apply-for-https-certificate-practice/</id>
-    <published>2018-12-02T14:46:37.000Z</published>
-    <updated>2020-01-31T05:46:37.678Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;1-安装-acme-sh&quot;&gt;&lt;a href=&quot;#1-安装-acme-sh&quot; class=&quot;headerlink&quot; title=&quot;1. 安装 acme.sh&quot;&gt;&lt;/a&gt;1. 安装 acme.sh&lt;/h2&gt;&lt;p&gt;&lt;code&gt;curl 
-        
-      
-    
-    </summary>
-    
-    
-      <category term="环境" scheme="https://blog.iwnweb.com/categories/%E7%8E%AF%E5%A2%83/"/>
-    
-    
-      <category term="环境" scheme="https://blog.iwnweb.com/tags/%E7%8E%AF%E5%A2%83/"/>
-    
-      <category term="nginx" scheme="https://blog.iwnweb.com/tags/nginx/"/>
-    
-      <category term="服务器" scheme="https://blog.iwnweb.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
-      <category term="https" scheme="https://blog.iwnweb.com/tags/https/"/>
-    
-      <category term="acme.sh" scheme="https://blog.iwnweb.com/tags/acme-sh/"/>
     
   </entry>
   
