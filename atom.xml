@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.iwnweb.com/"/>
-  <updated>2020-02-07T03:09:38.139Z</updated>
+  <updated>2020-04-18T23:46:50.018Z</updated>
   <id>https://blog.iwnweb.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>这也许是你期待已久的 laravel 快速上手教程</title>
+    <link href="https://blog.iwnweb.com/uncategorized/this-may-be-your-long-awaited-laravel-quick-start-tutorial/"/>
+    <id>https://blog.iwnweb.com/uncategorized/this-may-be-your-long-awaited-laravel-quick-start-tutorial/</id>
+    <published>2020-04-18T23:43:26.000Z</published>
+    <updated>2020-04-18T23:46:50.018Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一、Laravel-框架安装&quot;&gt;&lt;a href=&quot;#一、Laravel-框架安装&quot; class=&quot;headerlink&quot; title=&quot;一、Laravel 框架安装&quot;&gt;&lt;/a&gt;一、Laravel 框架安装&lt;/h2&gt;&lt;p&gt;文档：&lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>疫情下的远程办公</title>
@@ -552,33 +575,6 @@ sudo apt-get update &amp;amp;&amp;amp; sudo
     
     
       <category term="脚本" scheme="https://blog.iwnweb.com/tags/%E8%84%9A%E6%9C%AC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>element-ui 表格无限抖动问题及解决</title>
-    <link href="https://blog.iwnweb.com/kai-fa/infinite-jitter-of-element-ui-table-and-its-solution/"/>
-    <id>https://blog.iwnweb.com/kai-fa/infinite-jitter-of-element-ui-table-and-its-solution/</id>
-    <published>2019-07-03T05:14:14.000Z</published>
-    <updated>2020-01-31T05:46:37.730Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h2&gt;&lt;p&gt;element-ui 是一个不错的前端框架，可以帮助开发者在开发中快速的完成需求。&lt;br&gt;在开发中，我们的前端 UI
-        
-      
-    
-    </summary>
-    
-    
-      <category term="开发" scheme="https://blog.iwnweb.com/categories/%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="前端" scheme="https://blog.iwnweb.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
