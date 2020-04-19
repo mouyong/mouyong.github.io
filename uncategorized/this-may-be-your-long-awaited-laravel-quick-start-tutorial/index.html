@@ -398,7 +398,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    835
+                    1k
                 </div>
                 
 
@@ -596,7 +596,7 @@ class TestController extends Controller
 <li>浏览器访问</li>
 </ol>
 <p>web: <a href="http://blog.test/test/controller" target="_blank" rel="noopener">http://blog.test/test/controller</a><br>api: <a href="http://blog.test/api/test/controller" target="_blank" rel="noopener">http://blog.test/api/test/controller</a></p>
-<h2 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h2><h3 id="1-数据库迁移"><a href="#1-数据库迁移" class="headerlink" title="1. 数据库迁移"></a>1. 数据库迁移</h3><p>文档：<a href="https://learnku.com/docs/laravel/7.x/migrations/7496" target="_blank" rel="noopener">https://learnku.com/docs/laravel/7.x/migrations/7496</a></p>
+<h2 id="四、创建模型"><a href="#四、创建模型" class="headerlink" title="四、创建模型"></a>四、创建模型</h2><h3 id="1-数据库迁移"><a href="#1-数据库迁移" class="headerlink" title="1. 数据库迁移"></a>1. 数据库迁移</h3><p>文档：<a href="https://learnku.com/docs/laravel/7.x/migrations/7496" target="_blank" rel="noopener">https://learnku.com/docs/laravel/7.x/migrations/7496</a></p>
 <p>迁移默认目录为 <code>database/migrations</code></p>
 <ol>
 <li><p>新建迁移<br><code>php artisan make:migration create_tests_table --create tests</code></p>
@@ -611,6 +611,64 @@ class TestController extends Controller
 <p>创建模型，并指定目录为 <code>app/Models/</code></p>
 <p><code>php artisan make:model Models/Test</code></p>
 <p>此时模型 Test 默认关联到数据的 tests 表，可以修改模型属性 $table ，关联其它表。</p>
+<h3 id="3-在控制器中使用模型"><a href="#3-在控制器中使用模型" class="headerlink" title="3. 在控制器中使用模型"></a>3. 在控制器中使用模型</h3><ol>
+<li>创建路由</li>
+</ol>
+<p><code>routes/web.php</code></p>
+<pre><code>Route::get('test/model', 'TestContoller@testUsingModel');</code></pre><p><code>routes/api.php</code></p>
+<pre><code>Route::get('test/model', 'TestContoller@testUsingModelInApiRoute');</code></pre><ol start="2">
+<li>新增控制器处理函数</li>
+</ol>
+<pre><code>...
+class TestController extends Controller
+{
+    ...
+    public function testUsingModel()
+    {
+        return Test::all();
+    }
+
+    public function testUsingModel()
+    {
+        return response()-&gt;json(Test::paginate());
+    }
+    ...
+}</code></pre><ol start="3">
+<li>访问路由</li>
+</ol>
+<p>web: <a href="http://blog.test/test/model" target="_blank" rel="noopener">http://blog.test/test/model</a><br>api: <a href="http://blog.test/api/test/model" target="_blank" rel="noopener">http://blog.test/api/test/model</a></p>
+<h2 id="五、接收请求数据"><a href="#五、接收请求数据" class="headerlink" title="五、接收请求数据"></a>五、接收请求数据</h2><ol>
+<li>创建路由</li>
+</ol>
+<p><code>routes/web.php</code></p>
+<pre><code>Route::get('test/request', 'TestContoller@getRequestData');</code></pre><ol start="2">
+<li>新增控制器处理函数</li>
+</ol>
+<pre><code>...
+use Illuminate\Http\Request;
+...
+class TestController extends Controller
+{
+    ...
+    public function getRequestData(Request $request)
+    {
+        return $request-&gt;all();
+    }
+
+    public function testUsingModel()
+    {
+        return response()-&gt;json(Test::paginate());
+    }
+    ...
+}</code></pre><ol start="3">
+<li>访问路由</li>
+</ol>
+<p>web: <a href="http://blog.test/test/request" target="_blank" rel="noopener">http://blog.test/test/request</a></p>
+<ol start="4">
+<li>api 同理</li>
+</ol>
+<h2 id="尾声"><a href="#尾声" class="headerlink" title="尾声"></a>尾声</h2><p>文章首发于<a href="https://blog.iwnweb.com/uncategorized/this-may-be-your-long-awaited-laravel-quick-start-tutorial/">个人博客</a></p>
+<p>如有疑问或建议，欢迎留言交流</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1125,7 +1183,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">30.9k</span>&nbsp;字
+                class="white-color">31.1k</span>&nbsp;字
             
             
             
