@@ -236,7 +236,7 @@ class TestController extends Controller
 web: http://blog.test/test/controller
 api: http://blog.test/api/test/controller
 
-## 模型
+## 四、创建模型
 
 ### 1. 数据库迁移
 
@@ -263,3 +263,85 @@ api: http://blog.test/api/test/controller
 `php artisan make:model Models/Test`
 
 此时模型 Test 默认关联到数据的 tests 表，可以修改模型属性 $table ，关联其它表。
+
+### 3. 在控制器中使用模型
+
+1. 创建路由
+
+`routes/web.php`
+```
+Route::get('test/model', 'TestContoller@testUsingModel');
+```
+
+`routes/api.php`
+```
+Route::get('test/model', 'TestContoller@testUsingModelInApiRoute');
+```
+
+2. 新增控制器处理函数
+
+```
+...
+class TestController extends Controller
+{
+    ...
+    public function testUsingModel()
+    {
+        return Test::all();
+    }
+
+    public function testUsingModel()
+    {
+        return response()->json(Test::paginate());
+    }
+    ...
+}
+```
+
+3. 访问路由
+
+web: http://blog.test/test/model
+api: http://blog.test/api/test/model
+
+## 五、接收请求数据
+
+1. 创建路由
+
+`routes/web.php`
+```
+Route::get('test/request', 'TestContoller@getRequestData');
+```
+
+2. 新增控制器处理函数
+
+```
+...
+use Illuminate\Http\Request;
+...
+class TestController extends Controller
+{
+    ...
+    public function getRequestData(Request $request)
+    {
+        return $request->all();
+    }
+
+    public function testUsingModel()
+    {
+        return response()->json(Test::paginate());
+    }
+    ...
+}
+```
+
+3. 访问路由
+
+web: http://blog.test/test/request
+
+4. api 同理
+
+## 尾声
+
+文章首发于[个人博客](https://blog.iwnweb.com/uncategorized/this-may-be-your-long-awaited-laravel-quick-start-tutorial/)
+
+如有疑问或建议，欢迎留言交流
