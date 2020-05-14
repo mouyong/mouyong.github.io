@@ -1,8 +1,10 @@
 ---
 title: 代码提交规范
 date: 2020-05-14 10:33:51
-categories: 环境
-tags: 开发
+categories:
+- 环境
+tags:
+- 开发
 
 english_title: Code-submission-specification
 ---

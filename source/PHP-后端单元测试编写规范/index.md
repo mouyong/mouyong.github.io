@@ -1,8 +1,10 @@
 ---
 title: PHP 后端单元测试编写规范
 date: 2020-05-14 15:47:28
-categories: 环境
-tags: 开发
+categories:
+- 环境
+tags:
+- 开发
 
 english_title: PHP-backend-unit-test-writing-specification
 ---
