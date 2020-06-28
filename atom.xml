@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.iwnweb.com/"/>
-  <updated>2020-06-28T08:35:40.038Z</updated>
+  <updated>2020-06-28T08:49:35.460Z</updated>
   <id>https://blog.iwnweb.com/</id>
   
   <author>
@@ -15,29 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>遇到服务器无可用磁盘空间该怎么排查？</title>
-    <link href="https://blog.iwnweb.com/uncategorized/how-to-troubleshoot-when-there-is-no-free-disk-space-on-the-server/"/>
-    <id>https://blog.iwnweb.com/uncategorized/how-to-troubleshoot-when-there-is-no-free-disk-space-on-the-server/</id>
-    <published>2020-06-28T06:57:42.000Z</published>
-    <updated>2020-06-28T08:35:40.038Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;在端午期间，突然收到消息说，sentry 服务无法访问了，请求总是出现 502 页面相应。揣着忐忑不安的心情 ♥
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
   
   <entry>
     <title>如何通过一番操作释放服务器 17G 磁盘空间</title>
@@ -571,6 +548,33 @@ sudo apt-get update &amp;amp;&amp;amp; sudo
     
     
       <category term="工具" scheme="https://blog.iwnweb.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>单片机的小笔记</title>
+    <link href="https://blog.iwnweb.com/bi-ji/small-notes-of-single-chip-microcomputer/"/>
+    <id>https://blog.iwnweb.com/bi-ji/small-notes-of-single-chip-microcomputer/</id>
+    <published>2019-07-09T12:24:21.000Z</published>
+    <updated>2020-01-31T05:46:37.769Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;笔记&quot;&gt;&lt;a href=&quot;#笔记&quot; class=&quot;headerlink&quot; title=&quot;笔记&quot;&gt;&lt;/a&gt;笔记&lt;/h2&gt;&lt;h3 id=&quot;2-1-单片机内部资源&quot;&gt;&lt;a href=&quot;#2-1-单片机内部资源&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="笔记" scheme="https://blog.iwnweb.com/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://blog.iwnweb.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
