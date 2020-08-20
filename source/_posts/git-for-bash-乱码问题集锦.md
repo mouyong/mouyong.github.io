@@ -9,7 +9,7 @@ english_title: Git-for-bash-garbled-problem
 
 # git for bash 乱码问题集锦
 
-查看终端编码设置
+- 查看终端编码设置
 
 `LANG c、Character Set utf-8 (unicode)`
 
