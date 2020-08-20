@@ -4,6 +4,53 @@
   
     
     <entry>
+      <title>laravel 集成 mongodb 记录</title>
+      <link href="/uncategorized/laravel-integration-mongodb-record/"/>
+      <url>/uncategorized/laravel-integration-mongodb-record/</url>
+      
+        <content type="html"><![CDATA[<h1 id="laravel-集成-mongodb-记录"><a href="#laravel-集成-mongodb-记录" class="headerlink" title="laravel 集成 mongodb 记录"></a>laravel 集成 mongodb 记录</h1><h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h2><p><code>composer require jenssegers/mongodb</code></p><h2 id="2-在-config-databases-php-添加-mongodb-配置"><a href="#2-在-config-databases-php-添加-mongodb-配置" class="headerlink" title="2. 在 config/databases.php 添加 mongodb 配置"></a>2. 在 config/databases.php 添加 mongodb 配置</h2><pre><code>'mongodb' =&gt; [    'driver' =&gt; 'mongodb',    'host' =&gt; env('DB_HOST', '127.0.0.1'),    'port' =&gt; env('DB_PORT', 27017),    'database' =&gt; env('DB_DATABASE', 'homestead'),    'username' =&gt; env('DB_USERNAME', 'homestead'),    'password' =&gt; env('DB_PASSWORD', 'secret'),    'options' =&gt; [        // here you can pass more settings to the Mongo Driver Manager        // see https://www.php.net/manual/en/mongodb-driver-manager.construct.php under "Uri Options" for a list of complete parameters that you can use        'database' =&gt; env('DB_AUTHENTICATION_DATABASE', 'admin'), // required with Mongo 3+    ],],</code></pre><h2 id="3-mongodb-添加用户信息"><a href="#3-mongodb-添加用户信息" class="headerlink" title="3. mongodb 添加用户信息"></a>3. mongodb 添加用户信息</h2><pre><code>use admindb.auth("username", "password")db.createUser({user: "your-username", pwd: "password", roles: [{role: "dbOwner", db: "database"}]})示例:use admindb.auth("root", "example")db.createUser({user: "test", pwd: "123456", roles: [{role: "dbOwner", db: "test"}]})db.createUser({user: "question", pwd:"#EDC4rfv", roles: [{role: "dbOwner", db: "question"}]})</code></pre><h2 id="4-配置数据库环境"><a href="#4-配置数据库环境" class="headerlink" title="4. 配置数据库环境"></a>4. 配置数据库环境</h2><pre><code># mongodb productionDB_CONNECTION=mongodbDB_HOST=ecs.iwnweb.comDB_PORT=27017DB_DATABASE=question-devDB_USERNAME=question-devDB_PASSWORD=123456</code></pre><h2 id="5-修改-User-模型的继承类"><a href="#5-修改-User-模型的继承类" class="headerlink" title="5. 修改 User 模型的继承类"></a>5. 修改 User 模型的继承类</h2><pre><code>use Jenssegers\Mongodb\Auth\User as Authenticatable;class User extends Authenticatable{}</code></pre><h2 id="6-修改-model-stub-的继承类"><a href="#6-修改-model-stub-的继承类" class="headerlink" title="6. 修改 model.stub 的继承类"></a>6. 修改 model.stub 的继承类</h2><p>1). 发布 stubs 文件<br>参考： <a href="https://learnku.com/docs/laravel/7.x/artisan/7480#stub-customization" target="_blank" rel="noopener">https://learnku.com/docs/laravel/7.x/artisan/7480#stub-customization</a></p><p><code>php artisan stub:publish</code></p><p>2). 修改 model.stub</p><pre><code>namespace {{ namespace }};use Jenssegers\Mongodb\Eloquent\Model;class {{ class }} extends Model{    //}</code></pre><h2 id="7-文档"><a href="#7-文档" class="headerlink" title="7. 文档"></a>7. 文档</h2><p>Laravel MongoDB: <a href="https://github.com/jenssegers/laravel-mongodb" target="_blank" rel="noopener">https://github.com/jenssegers/laravel-mongodb</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>git-for-bash 乱码问题集锦</title>
+      <link href="/uncategorized/git-for-bash-garbled-problem/"/>
+      <url>/uncategorized/git-for-bash-garbled-problem/</url>
+      
+        <content type="html"><![CDATA[<h1 id="git-for-bash-乱码问题集锦"><a href="#git-for-bash-乱码问题集锦" class="headerlink" title="git for bash 乱码问题集锦"></a>git for bash 乱码问题集锦</h1><p>查看终端编码设置</p><p><code>LANG c、Character Set utf-8 (unicode)</code></p><ul><li>输入中文乱码</li></ul><p>```~/.bashrc<br>chcp.com 6500</p><p>set meta-flag on<br>set input-meta on<br>set output-meta on<br>set convert-meta off</p><p>export OUTPUT_CHARSET=”utf-8”<br>export LESSCHARSET=”utf-8”</p><pre><code>- git commit 乱码</code></pre><p>git config –global i18n.commitencoding utf-8<br>git config –global i18n.logoutputencoding utf-8<br>git config –global gui.encoding utf-8</p><p>```</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol><li>各种Git Bash乱码解决：<a href="https://www.cnblogs.com/steinven/p/10491262.html" target="_blank" rel="noopener">https://www.cnblogs.com/steinven/p/10491262.html</a></li><li>git乱码解决方案汇总.txt：<a href="https://gist.github.com/xkyii/1079783" target="_blank" rel="noopener">https://gist.github.com/xkyii/1079783</a></li></ol><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 环境 </tag>
+            
+            <tag> windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>七牛添加-Let&#39;s-Encrypt-https-证书（人工）</title>
+      <link href="/uncategorized/undefined/"/>
+      <url>/uncategorized/undefined/</url>
+      
+        <content type="html"><![CDATA[<h2 id="安装-acme-sh"><a href="#安装-acme-sh" class="headerlink" title="安装 acme.sh"></a>安装 acme.sh</h2><p>在命令行执行安装命令 <code>curl  https://get.acme.sh | sh</code>。</p><p>命令执行结束后，会将 acme.sh 安装到当前登录用户的 home 目录下。</p><h2 id="申请域名证书"><a href="#申请域名证书" class="headerlink" title="申请域名证书"></a>申请域名证书</h2><h3 id="通过-dns-进行域名所有权校验"><a href="#通过-dns-进行域名所有权校验" class="headerlink" title="通过 dns 进行域名所有权校验"></a>通过 dns 进行域名所有权校验</h3><h2 id="部署证书至七牛"><a href="#部署证书至七牛" class="headerlink" title="部署证书至七牛"></a>部署证书至七牛</h2><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>手把手带你通过一番操作释放服务器 17G 磁盘空间</title>
       <link href="/yun-wei/how-to-release-17g-disk-space-of-server-through-some-operations/"/>
       <url>/yun-wei/how-to-release-17g-disk-space-of-server-through-some-operations/</url>
