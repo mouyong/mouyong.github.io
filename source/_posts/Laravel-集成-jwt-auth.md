@@ -1,6 +1,6 @@
 ---
 title: Laravel 集成 jwt-auth
-date: 2020-08-22 19:01:13
+date: 2020-08-22 19:40:13
 tags:
 - Laravel
 - jwt-auth
@@ -75,6 +75,19 @@ class User extends Authenticatable implements JWTSubject
     public function getJWTCustomClaims()
     {
         return [];
+    }
+
+    public static function username()
+    {
+        $username = \request('username');
+
+        $value = filter_var($username, FILTER_VALIDATE_INT);
+        if ($value) return 'mobile';
+
+        $value = filter_var($username, FILTER_VALIDATE_EMAIL);
+        if ($value) return 'email';
+
+        return 'name';
     }
 }
 ```
