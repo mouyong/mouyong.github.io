@@ -1,11 +1,11 @@
 ---
-title: laravel 集成 mongodb 记录
+title: laravel 集成 mongodb
 date: 2020-08-20 10:37:47
 tags:
-english_title: Laravel-integration-mongodb-record
+english_title: Laravel-integration-mongodb
 ---
 
-# laravel 集成 mongodb 记录
+# laravel 集成 mongodb
 
 ## 1. 安装
 
