@@ -407,7 +407,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    513
+                    537
                 </div>
                 
 
@@ -474,6 +474,20 @@ class LoginController extends Controller
     public function __construct()
     {
         $this-&gt;middleware('guest')-&gt;except('logout');
+    }
+
+    /**
+     * 用户认证通过.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  mixed  $user
+     * @return mixed
+     */
+    protected function authenticated(Request $request, $user)
+    {
+        return response([
+            //
+        ]);
     }
 
     public function username()
