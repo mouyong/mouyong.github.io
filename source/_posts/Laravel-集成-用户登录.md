@@ -73,20 +73,6 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    /**
-     * 用户认证通过.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  mixed  $user
-     * @return mixed
-     */
-    protected function authenticated(Request $request, $user)
-    {
-        return response([
-            //
-        ]);
-    }
-
     public function username()
     {
         return User::username();
@@ -99,7 +85,29 @@ class LoginController extends Controller
 }
 ```
 
-### 5. 更新 `User` 模型
+### 5. 更新 `HomeController` 控制器
+
+```
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class HomeController extends Controller
+{
+    <...>
+
+    public function __construct()
+    {
+        $this->middleware('auth:web');
+    }
+    <...>
+}
+
+```
+
+### 6. 更新 `User` 模型
 
 新增 `username()`、`getJWTIdentifier()`、`getJWTCustomClaims()`
 
@@ -169,7 +177,7 @@ class User extends \Jenssegers\Mongodb\Auth\User implements JWTSubject
 }
 ```
 
-#### 6. 确保 `RouteServiceProvider` 中包含 `mapWebRoutes()`
+### 7. 确保 `RouteServiceProvider` 中包含 `mapWebRoutes()`
 
 ```
 <?php
@@ -198,7 +206,7 @@ class RouteServiceProvider extends ServiceProvider
 }
 ```
 
-#### 7. 确保 `routes/web.php` 包含 `/` 路由
+### 8. 确保 `routes/web.php` 包含 `/` 路由
 
 ```
 <?php
@@ -245,6 +253,34 @@ class Handler extends ExceptionHandler
     <...>
 }
 
+```
+
+### 9. 更新 `App\Http\Middleware\Authenticate` 中间件
+
+```
+<?php
+
+namespace App\Http\Middleware;
+
+use Illuminate\Auth\AuthenticationException;
+use Illuminate\Auth\Middleware\Authenticate as Middleware;
+
+class Authenticate extends Middleware
+{
+    /**
+     * @param \Illuminate\Http\Request $request
+     * @return string
+     * @throws AuthenticationException
+     */
+    protected function redirectTo($request)
+    {
+        if (! $request->expectsJson()) {
+            return route('login');
+        }
+
+        throw new AuthenticationException();
+    }
+}
 ```
 
 ## 参考
