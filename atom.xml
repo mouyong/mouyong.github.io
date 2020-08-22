@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.iwnweb.com/"/>
-  <updated>2020-08-20T02:50:13.276Z</updated>
+  <updated>2020-08-22T12:55:51.249Z</updated>
   <id>https://blog.iwnweb.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>laravel 集成 mongodb 记录</title>
-    <link href="https://blog.iwnweb.com/uncategorized/laravel-integration-mongodb-record/"/>
-    <id>https://blog.iwnweb.com/uncategorized/laravel-integration-mongodb-record/</id>
-    <published>2020-08-20T02:37:47.000Z</published>
-    <updated>2020-08-20T02:50:13.276Z</updated>
+    <title>Laravel 集成 jwt-auth</title>
+    <link href="https://blog.iwnweb.com/uncategorized/laravel-integrated-with-jwt-auth/"/>
+    <id>https://blog.iwnweb.com/uncategorized/laravel-integrated-with-jwt-auth/</id>
+    <published>2020-08-22T11:40:13.000Z</published>
+    <updated>2020-08-22T12:55:51.249Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,61 @@
       
         
         
-          &lt;h1 id=&quot;laravel-集成-mongodb-记录&quot;&gt;&lt;a href=&quot;#laravel-集成-mongodb-记录&quot; class=&quot;headerlink&quot; title=&quot;laravel 集成 mongodb 记录&quot;&gt;&lt;/a&gt;laravel 集成 mongodb
+          &lt;h1 id=&quot;Laravel-集成-jwt-auth&quot;&gt;&lt;a href=&quot;#Laravel-集成-jwt-auth&quot; class=&quot;headerlink&quot; title=&quot;Laravel 集成 jwt-auth&quot;&gt;&lt;/a&gt;Laravel 集成 jwt-auth&lt;/h1&gt;&lt;h2
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Laravel" scheme="https://blog.iwnweb.com/tags/Laravel/"/>
+    
+      <category term="jwt-auth" scheme="https://blog.iwnweb.com/tags/jwt-auth/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Laravel 集成用户登录</title>
+    <link href="https://blog.iwnweb.com/uncategorized/laravel-integrated-user-login/"/>
+    <id>https://blog.iwnweb.com/uncategorized/laravel-integrated-user-login/</id>
+    <published>2020-08-22T11:09:38.000Z</published>
+    <updated>2020-08-22T13:17:27.152Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Laravel-集成用户登录&quot;&gt;&lt;a href=&quot;#Laravel-集成用户登录&quot; class=&quot;headerlink&quot; title=&quot;Laravel 集成用户登录&quot;&gt;&lt;/a&gt;Laravel 集成用户登录&lt;/h1&gt;&lt;h2 id=&quot;安装&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Laravel" scheme="https://blog.iwnweb.com/tags/Laravel/"/>
+    
+      <category term="用户登录" scheme="https://blog.iwnweb.com/tags/%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>laravel 集成 mongodb</title>
+    <link href="https://blog.iwnweb.com/uncategorized/laravel-integration-mongodb/"/>
+    <id>https://blog.iwnweb.com/uncategorized/laravel-integration-mongodb/</id>
+    <published>2020-08-20T02:37:47.000Z</published>
+    <updated>2020-08-22T11:07:48.488Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;laravel-集成-mongodb&quot;&gt;&lt;a href=&quot;#laravel-集成-mongodb&quot; class=&quot;headerlink&quot; title=&quot;laravel 集成 mongodb&quot;&gt;&lt;/a&gt;laravel 集成 mongodb&lt;/h1&gt;&lt;h2
         
       
     
@@ -499,61 +553,6 @@ sudo apt-get update &amp;amp;&amp;amp; sudo
         
         
           &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;经过前面 2 篇文章的铺垫，我们对 Protocol Buffers
-        
-      
-    
-    </summary>
-    
-    
-      <category term="开发" scheme="https://blog.iwnweb.com/categories/%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="Protocol-Buffers" scheme="https://blog.iwnweb.com/tags/Protocol-Buffers/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Protocol Buffers 协议基础语法</title>
-    <link href="https://blog.iwnweb.com/kai-fa/protocol-buffers-protocol-basic-grammar/"/>
-    <id>https://blog.iwnweb.com/kai-fa/protocol-buffers-protocol-basic-grammar/</id>
-    <published>2019-08-17T16:31:57.000Z</published>
-    <updated>2020-01-31T05:46:37.679Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;继上一节介绍了 Protocol Buffers 的相关信息后，我们了解到协议的一些特性，优势。&lt;/p&gt;
-&lt;p&gt;接下来让我们简单学习下
-        
-      
-    
-    </summary>
-    
-    
-      <category term="开发" scheme="https://blog.iwnweb.com/categories/%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="Protocol-Buffers" scheme="https://blog.iwnweb.com/tags/Protocol-Buffers/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Protocol Buffers 简介</title>
-    <link href="https://blog.iwnweb.com/kai-fa/introduction-to-protocol-buffers/"/>
-    <id>https://blog.iwnweb.com/kai-fa/introduction-to-protocol-buffers/</id>
-    <published>2019-08-17T15:59:58.000Z</published>
-    <updated>2020-01-31T05:46:37.702Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;1-什么是-Protocol-Buffers&quot;&gt;&lt;a href=&quot;#1-什么是-Protocol-Buffers&quot; class=&quot;headerlink&quot; title=&quot;1. 什么是 Protocol Buffers?&quot;&gt;&lt;/a&gt;1. 什么是 Protocol
         
       
     
