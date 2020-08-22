@@ -407,7 +407,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    537
+                    600
                 </div>
                 
 
@@ -476,20 +476,6 @@ class LoginController extends Controller
         $this-&gt;middleware('guest')-&gt;except('logout');
     }
 
-    /**
-     * 用户认证通过.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  mixed  $user
-     * @return mixed
-     */
-    protected function authenticated(Request $request, $user)
-    {
-        return response([
-            //
-        ]);
-    }
-
     public function username()
     {
         return User::username();
@@ -499,7 +485,23 @@ class LoginController extends Controller
     {
         return Auth::guard('web');
     }
-}</code></pre><h3 id="5-更新-User-模型"><a href="#5-更新-User-模型" class="headerlink" title="5. 更新 User 模型"></a>5. 更新 <code>User</code> 模型</h3><p>新增 <code>username()</code>、<code>getJWTIdentifier()</code>、<code>getJWTCustomClaims()</code></p>
+}</code></pre><h3 id="5-更新-HomeController-控制器"><a href="#5-更新-HomeController-控制器" class="headerlink" title="5. 更新 HomeController 控制器"></a>5. 更新 <code>HomeController</code> 控制器</h3><pre><code>&lt;?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class HomeController extends Controller
+{
+    &lt;...&gt;
+
+    public function __construct()
+    {
+        $this-&gt;middleware('auth:web');
+    }
+    &lt;...&gt;
+}
+</code></pre><h3 id="6-更新-User-模型"><a href="#6-更新-User-模型" class="headerlink" title="6. 更新 User 模型"></a>6. 更新 <code>User</code> 模型</h3><p>新增 <code>username()</code>、<code>getJWTIdentifier()</code>、<code>getJWTCustomClaims()</code></p>
 <pre><code>&lt;?php
 
 namespace App;
@@ -562,7 +564,7 @@ class User extends \Jenssegers\Mongodb\Auth\User implements JWTSubject
 
         return 'name';
     }
-}</code></pre><h4 id="6-确保-RouteServiceProvider-中包含-mapWebRoutes"><a href="#6-确保-RouteServiceProvider-中包含-mapWebRoutes" class="headerlink" title="6. 确保 RouteServiceProvider 中包含 mapWebRoutes()"></a>6. 确保 <code>RouteServiceProvider</code> 中包含 <code>mapWebRoutes()</code></h4><pre><code>&lt;?php
+}</code></pre><h3 id="7-确保-RouteServiceProvider-中包含-mapWebRoutes"><a href="#7-确保-RouteServiceProvider-中包含-mapWebRoutes" class="headerlink" title="7. 确保 RouteServiceProvider 中包含 mapWebRoutes()"></a>7. 确保 <code>RouteServiceProvider</code> 中包含 <code>mapWebRoutes()</code></h3><pre><code>&lt;?php
 
 namespace App\Providers;
 
@@ -585,7 +587,7 @@ class RouteServiceProvider extends ServiceProvider
             -&gt;group(base_path('routes/web.php'));
     }
     &lt;...&gt;
-}</code></pre><h4 id="7-确保-routes-web-php-包含-路由"><a href="#7-确保-routes-web-php-包含-路由" class="headerlink" title="7. 确保 routes/web.php 包含 / 路由"></a>7. 确保 <code>routes/web.php</code> 包含 <code>/</code> 路由</h4><pre><code>&lt;?php
+}</code></pre><h3 id="8-确保-routes-web-php-包含-路由"><a href="#8-确保-routes-web-php-包含-路由" class="headerlink" title="8. 确保 routes/web.php 包含 / 路由"></a>8. 确保 <code>routes/web.php</code> 包含 <code>/</code> 路由</h3><pre><code>&lt;?php
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -622,7 +624,29 @@ class Handler extends ExceptionHandler
     }
     &lt;...&gt;
 }
-</code></pre><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>文档：<a href="https://learnku.com/docs/laravel/7.x/authentication/7474" target="_blank" rel="noopener">https://learnku.com/docs/laravel/7.x/authentication/7474</a></p>
+</code></pre><h3 id="9-更新-App-Http-Middleware-Authenticate-中间件"><a href="#9-更新-App-Http-Middleware-Authenticate-中间件" class="headerlink" title="9. 更新 App\Http\Middleware\Authenticate 中间件"></a>9. 更新 <code>App\Http\Middleware\Authenticate</code> 中间件</h3><pre><code>&lt;?php
+
+namespace App\Http\Middleware;
+
+use Illuminate\Auth\AuthenticationException;
+use Illuminate\Auth\Middleware\Authenticate as Middleware;
+
+class Authenticate extends Middleware
+{
+    /**
+     * @param \Illuminate\Http\Request $request
+     * @return string
+     * @throws AuthenticationException
+     */
+    protected function redirectTo($request)
+    {
+        if (! $request-&gt;expectsJson()) {
+            return route('login');
+        }
+
+        throw new AuthenticationException();
+    }
+}</code></pre><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>文档：<a href="https://learnku.com/docs/laravel/7.x/authentication/7474" target="_blank" rel="noopener">https://learnku.com/docs/laravel/7.x/authentication/7474</a></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1142,7 +1166,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">34.1k</span>&nbsp;字
+                class="white-color">34.2k</span>&nbsp;字
             
             
             
