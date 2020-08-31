@@ -1,11 +1,13 @@
 ---
-title: laravel 集成 mongodb
+title: Laravel 集成 mongodb
 date: 2020-08-20 10:37:47
+category: Laravel
 tags:
+- Laravel
 english_title: Laravel-integration-mongodb
 ---
 
-# laravel 集成 mongodb
+# Laravel 集成 mongodb
 
 ## 1. 安装
 
@@ -63,6 +65,42 @@ use Jenssegers\Mongodb\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
 
+}
+```
+
+## 6. 修改 `AppServiceProvider`，为 `\Illuminate\Database\Eloquent\Builder` 注入 `result` 函数
+
+```
+<?php
+
+namespace App\Providers;
+
+<...>
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\ServiceProvider;
+
+class AppServiceProvider extends ServiceProvider
+{
+    <...>
+    public function boot()
+    {
+        <...>
+        // 设置数据库字符串默认长度，utf8mb4 索引长度最多为 191。
+        Schema::defaultStringLength(191);
+
+        // 为 `\Illuminate\Database\Eloquent\Builder` 注入 `result` 函数
+        \Illuminate\Database\Eloquent\Builder::macro('result', function () {
+            if (!request('page') || request('export')) {
+                return $this->get(request('columns', ['*']));
+            }
+
+            $per_page = (int) request('per_page', 20);
+
+            return $this->paginate($per_page <= 100 ? $per_page : 100, request('columns', ['*']));
+        });
+        <...>
+    }
+    <...>
 }
 ```
 

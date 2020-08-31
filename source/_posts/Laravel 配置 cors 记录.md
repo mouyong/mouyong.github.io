@@ -1,12 +1,11 @@
 ---
 title: Laravel 配置 cors 记录
 date: 2018-08-13 12:57:20
-categories: 环境
+category: Laravel
 tags:
   - 前端
   - Laravel
   - CORS
-
 english_title: Laravel-configuring-CORS-record
 ---
 

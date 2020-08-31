@@ -1,6 +1,7 @@
 ---
 title: Laravel 集成 jwt-auth
 date: 2020-08-22 19:40:13
+category: Laravel
 tags:
 - Laravel
 - jwt-auth
@@ -125,14 +126,13 @@ class User extends Authenticatable implements JWTSubject
 ```
 use App\Http\Controllers as Api;
 
+Route::post('auth/login', [Api\AuthController::class, 'login']);
 Route::group([
-    'middleware' => 'api',
-    'prefix' => 'auth'
+    'middleware' => 'auth:api',
 ], function ($router) {
-    Route::post('login', [Api\AuthController::class, 'login']);
-    Route::post('logout', [Api\AuthController::class, 'logout']);
-    Route::post('refresh', [Api\AuthController::class, 'refresh']);
-    Route::post('me', [Api\AuthController::class, 'me']);
+    Route::post('auth/logout', [Api\AuthController::class, 'logout']);
+    Route::post('auth/refresh', [Api\AuthController::class, 'refresh']);
+    Route::post('auth/me', [Api\AuthController::class, 'me']);
 });
 ```
 
@@ -150,16 +150,6 @@ use App\Http\Controllers\Controller;
 
 class AuthController extends Controller
 {
-    /**
-     * Create a new AuthController instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth:api', ['except' => ['login']]);
-    }
-
     /**
      * Get a JWT via given credentials.
      *
