@@ -4,9 +4,14 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Laravel 集成 jwt-auth, = - =,牟勇">
-    <meta name="description" content="Laravel 集成 jwt-auth安装1. 安装 jwt-authcomposer require tymon/jwt-auth
-2. 发布配置php artisan vendor:publish --provider=&#34;Tymon\J">
+    <meta name="keywords" content="Laravel 配置 cors 记录, = - =,牟勇">
+    <meta name="description" content="Laravel 配置 cors 记录配置过程Package 地址：https://github.com/barryvdh/laravel-cors
+
+安装
+
+composer require barryvdh/laravel-cors
+
+配">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +19,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Laravel 集成 jwt-auth | = - =</title>
+    <title>Laravel 配置 cors 记录 | = - =</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -255,12 +260,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Laravel 集成 jwt-auth</h1>
+                    <h1 class="description center-align post-title">Laravel 配置 cors 记录</h1>
                 </div>
             </div>
         </div>
@@ -381,14 +386,27 @@
                                 <span class="chip bg-color">Laravel</span>
                             </a>
                         
-                            <a href="/tags/jwt-auth/">
-                                <span class="chip bg-color">jwt-auth</span>
+                            <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                <span class="chip bg-color">前端</span>
+                            </a>
+                        
+                            <a href="/tags/CORS/">
+                                <span class="chip bg-color">CORS</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Laravel/" class="post-category">
+                                Laravel
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -397,7 +415,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-22
+                    2018-08-13
                 </div>
                 
 
@@ -406,14 +424,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    656
+                    142
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    1 分
                 </div>
                 
 
@@ -429,181 +447,35 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Laravel-集成-jwt-auth"><a href="#Laravel-集成-jwt-auth" class="headerlink" title="Laravel 集成 jwt-auth"></a>Laravel 集成 jwt-auth</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="1-安装-jwt-auth"><a href="#1-安装-jwt-auth" class="headerlink" title="1. 安装 jwt-auth"></a>1. 安装 jwt-auth</h3><p><code>composer require tymon/jwt-auth</code></p>
-<h3 id="2-发布配置"><a href="#2-发布配置" class="headerlink" title="2. 发布配置"></a>2. 发布配置</h3><p><code>php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider"</code></p>
-<h3 id="3-生成密钥"><a href="#3-生成密钥" class="headerlink" title="3. 生成密钥"></a>3. 生成密钥</h3><p><code>php artisan jwt:secret</code></p>
-<h3 id="4-配置环境变量"><a href="#4-配置环境变量" class="headerlink" title="4. 配置环境变量"></a>4. 配置环境变量</h3><p>添加环境变量至相关文件: .env.example、.env etc…</p>
-<pre><code># jwt 配置
-JWT_SECRET=
-JWT_TTL=60 # jwt token 失效时间，单位分钟，默认值 1 小时
-JWT_REFRESH_TTL=20160 # jwt refresh token 失效时间，单位分钟，默认值 2 周</code></pre><h3 id="5-用户认证"><a href="#5-用户认证" class="headerlink" title="5. 用户认证"></a>5. 用户认证</h3><p>快速开始：<a href="https://jwt-auth.readthedocs.io/en/develop/quick-start/" target="_blank" rel="noopener">https://jwt-auth.readthedocs.io/en/develop/quick-start/</a></p>
-<h4 id="1-更新-User-模型"><a href="#1-更新-User-模型" class="headerlink" title="1). 更新 User 模型"></a>1). 更新 <code>User</code> 模型</h4><p>实现 <code>Tymon\JWTAuth\Contracts\JWTSubject</code> 契约，在 <code>User</code> 模型中实现 <code>getJWTIdentifier()</code> 函数和 <code>getJWTCustomClaims()</code> 函数</p>
-<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
-
-<span class="token keyword">namespace</span> <span class="token package">App</span><span class="token punctuation">;</span>
-
-<span class="token keyword">use</span> <span class="token package">Tymon<span class="token punctuation">\</span>JWTAuth<span class="token punctuation">\</span>Contracts<span class="token punctuation">\</span>JWTSubject</span><span class="token punctuation">;</span>
-<span class="token keyword">use</span> <span class="token package">Illuminate<span class="token punctuation">\</span>Notifications<span class="token punctuation">\</span>Notifiable</span><span class="token punctuation">;</span>
-<span class="token keyword">use</span> <span class="token package">Illuminate<span class="token punctuation">\</span>Foundation<span class="token punctuation">\</span>Auth<span class="token punctuation">\</span>User</span> <span class="token keyword">as</span> Authenticatable<span class="token punctuation">;</span>
-
-<span class="token keyword">class</span> <span class="token class-name">User</span> <span class="token keyword">extends</span> <span class="token class-name">Authenticatable</span> <span class="token keyword">implements</span> <span class="token class-name">JWTSubject</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">use</span> <span class="token package">Notifiable</span><span class="token punctuation">;</span>
-
-    <span class="token comment" spellcheck="true">// Rest omitted for brevity</span>
-
-    <span class="token comment" spellcheck="true">/**
-     * Get the identifier that will be stored in the subject claim of the JWT.
-     *
-     * @return mixed
-     */</span>
-    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">getJWTIdentifier</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token variable">$this</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">getKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token comment" spellcheck="true">/**
-     * Return a key value array, containing any custom claims to be added to the JWT.
-     *
-     * @return array
-     */</span>
-    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">getJWTCustomClaims</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">function</span> <span class="token function">username</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token variable">$username</span> <span class="token operator">=</span> \<span class="token package">request</span><span class="token punctuation">(</span><span class="token string">'username'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-        <span class="token variable">$value</span> <span class="token operator">=</span> <span class="token function">filter_var</span><span class="token punctuation">(</span><span class="token variable">$username</span><span class="token punctuation">,</span> <span class="token constant">FILTER_VALIDATE_INT</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable">$value</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token string">'mobile'</span><span class="token punctuation">;</span>
-
-        <span class="token variable">$value</span> <span class="token operator">=</span> <span class="token function">filter_var</span><span class="token punctuation">(</span><span class="token variable">$username</span><span class="token punctuation">,</span> <span class="token constant">FILTER_VALIDATE_EMAIL</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable">$value</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token string">'email'</span><span class="token punctuation">;</span>
-
-        <span class="token keyword">return</span> <span class="token string">'name'</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
-<h4 id="2-配置身份认证守卫"><a href="#2-配置身份认证守卫" class="headerlink" title="2). 配置身份认证守卫"></a>2). 配置身份认证守卫</h4><ul>
-<li>修改 <code>config/auth.php</code> 的 <code>defaults.guard</code> 为 <code>api</code></li>
-<li>修改 <code>config/auth.php</code> 的 <code>guards</code> 信息，参考如下</li>
+                <h2 id="Laravel-配置-cors-记录"><a href="#Laravel-配置-cors-记录" class="headerlink" title="Laravel 配置 cors 记录"></a>Laravel 配置 cors 记录</h2><h2 id="配置过程"><a href="#配置过程" class="headerlink" title="配置过程"></a>配置过程</h2><p>Package 地址：<a href="https://github.com/barryvdh/laravel-cors" target="_blank" rel="noopener">https://github.com/barryvdh/laravel-cors</a></p>
+<ul>
+<li>安装</li>
 </ul>
-<pre><code>'guards' =&gt; [
-    'web' =&gt; [
-        'driver' =&gt; 'session',
-        'provider' =&gt; 'users',
-    ],
-
-    # laravel 自带的 api 认证，使用数据库相关字段存储 api token 信息
-    'laravel-api' =&gt; [
-        'driver' =&gt; 'token',
-        'provider' =&gt; 'users',
-        'hash' =&gt; false,
-    ],
-
-    'api' =&gt; [
-        'driver' =&gt; 'jwt',
-        'provider' =&gt; 'users',
-    ],
-],</code></pre><h4 id="3-添加一些基本的身份验证路由"><a href="#3-添加一些基本的身份验证路由" class="headerlink" title="3). 添加一些基本的身份验证路由"></a>3). 添加一些基本的身份验证路由</h4><p>在 <code>routes/api.php</code> 中添加如下路由：</p>
-<pre><code>use App\Http\Controllers as Api;
-
-Route::group([
-    'middleware' =&gt; 'api',
-    'prefix' =&gt; 'auth'
-], function ($router) {
-    Route::post('login', [Api\AuthController::class, 'login']);
-    Route::post('logout', [Api\AuthController::class, 'logout']);
-    Route::post('refresh', [Api\AuthController::class, 'refresh']);
-    Route::post('me', [Api\AuthController::class, 'me']);
-});</code></pre><h4 id="4-创建-AuthController-控制器"><a href="#4-创建-AuthController-控制器" class="headerlink" title="4). 创建 AuthController 控制器"></a>4). 创建 <code>AuthController</code> 控制器</h4><p>输入命令 <code>php artisan make:controller AuthController</code> 创建控制器</p>
-<pre><code>&lt;?php
-
-namespace App\Http\Controllers;
-
-use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\Controller;
-
-class AuthController extends Controller
-{
-    /**
-     * Create a new AuthController instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this-&gt;middleware('auth:api', ['except' =&gt; ['login']]);
-    }
-
-    /**
-     * Get a JWT via given credentials.
-     *
-     * @return \Illuminate\Http\JsonResponse
-     */
-    public function login()
-    {
-        $credentials = request(['email', 'password']);
-
-        if (! $token = auth()-&gt;attempt($credentials)) {
-            return response()-&gt;json(['error' =&gt; 'Unauthorized'], 401);
-        }
-
-        return $this-&gt;respondWithToken($token);
-    }
-
-    /**
-     * Get the authenticated User.
-     *
-     * @return \Illuminate\Http\JsonResponse
-     */
-    public function me()
-    {
-        return response()-&gt;json(auth()-&gt;user());
-    }
-
-    /**
-     * Log the user out (Invalidate the token).
-     *
-     * @return \Illuminate\Http\JsonResponse
-     */
-    public function logout()
-    {
-        auth()-&gt;logout();
-
-        return response()-&gt;json(['message' =&gt; 'Successfully logged out']);
-    }
-
-    /**
-     * Refresh a token.
-     *
-     * @return \Illuminate\Http\JsonResponse
-     */
-    public function refresh()
-    {
-        return $this-&gt;respondWithToken(auth()-&gt;refresh());
-    }
-
-    /**
-     * Get the token array structure.
-     *
-     * @param  string $token
-     *
-     * @return \Illuminate\Http\JsonResponse
-     */
-    protected function respondWithToken($token)
-    {
-        return response()-&gt;json([
-            'access_token' =&gt; $token,
-            'token_type' =&gt; 'bearer',
-            'expires_in' =&gt; auth()-&gt;factory()-&gt;getTTL() * 60
-        ]);
-    }
-}</code></pre><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
-<li>jwt-auth 文档: <a href="https://jwt-auth.readthedocs.io/en/develop/laravel-installation/" target="_blank" rel="noopener">https://jwt-auth.readthedocs.io/en/develop/laravel-installation/</a></li>
+<p><code>composer require barryvdh/laravel-cors</code></p>
+<ul>
+<li>配置中间件</li>
 </ul>
-<script>
+<pre><code>// \App\Http\Kernel $routeMiddleware 中添加
+protected $routeMiddleware = [
+    // ...
+    'cors' =&gt; \Barryvdh\Cors\HandleCors::class,
+];
+
+// $middlewareGroups =&gt; api =&gt; 中添加
+'api' =&gt; [
+    // ...
+    'cors',
+],</code></pre><ul>
+<li>发布配置文件至 config 目录</li>
+</ul>
+<p><code>php artisan vendor:publish --provider="Barryvdh\Cors\ServiceProvider"</code></p>
+<ul>
+<li>禁用 API 的 CSRF 保护（可选）</li>
+</ul>
+<pre><code>// App\Http\Middleware\VerifyCsrfToken
+protected $except = [
+    'api/*'
+];</code></pre><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -646,7 +518,7 @@ class AuthController extends Controller
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://blog.iwnweb.com/uncategorized/laravel-integrated-with-jwt-auth/">https://blog.iwnweb.com/uncategorized/laravel-integrated-with-jwt-auth/</a>
+                    <a href="https://blog.iwnweb.com/laravel/laravel-configuring-cors-record/">https://blog.iwnweb.com/laravel/laravel-configuring-cors-record/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -688,8 +560,12 @@ class AuthController extends Controller
                                     <span class="chip bg-color">Laravel</span>
                                 </a>
                             
-                                <a href="/tags/jwt-auth/">
-                                    <span class="chip bg-color">jwt-auth</span>
+                                <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                    <span class="chip bg-color">前端</span>
+                                </a>
+                            
+                                <a href="/tags/CORS/">
+                                    <span class="chip bg-color">CORS</span>
                                 </a>
                             
                         </div>
@@ -855,49 +731,49 @@ class AuthController extends Controller
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/uncategorized/laravel-integrated-with-jwt-auth/">
+                <a href="/huan-jing/deployer-usage-process/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Laravel 集成 jwt-auth">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Deployer 使用过程">
                         
-                        <span class="card-title">Laravel 集成 jwt-auth</span>
+                        <span class="card-title">Deployer 使用过程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Laravel 集成 jwt-auth安装1. 安装 jwt-authcomposer require tymon/jwt-auth
-2. 发布配置php artisan vendor:publish --provider="Tymon\J
+                            Deployer 使用过程步骤详细解释可见参考 又一篇 Deployer 的使用攻略
+全局安装 deployer此部分在本地操作
+composer global require deployer/deployer -vvv
+查看是否安装成功
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-22
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2018-08-13
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            牟勇
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%8E%AF%E5%A2%83/" class="post-category">
+                                    环境
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Laravel/">
-                        <span class="chip bg-color">Laravel</span>
-                    </a>
-                    
-                    <a href="/tags/jwt-auth/">
-                        <span class="chip bg-color">jwt-auth</span>
+                    <a href="/tags/%E7%8E%AF%E5%A2%83/">
+                        <span class="chip bg-color">环境</span>
                     </a>
                     
                 </div>
@@ -911,31 +787,40 @@ class AuthController extends Controller
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/uncategorized/laravel-integrated-user-login/">
+                <a href="/huan-jing/installing-docker-environment/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Laravel 集成用户登录">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="安装 docker 环境">
                         
-                        <span class="card-title">Laravel 集成用户登录</span>
+                        <span class="card-title">安装 docker 环境</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Laravel 集成用户登录安装1. 安装 laravel/uicomposer require laravel/ui
-2. 生成身份验证脚手架php artisan ui vue --auth
-3. 编译最新的脚手架资源npm insta
+                            安装 docker 环境安装脚本安装sudo curl -sSL https://get.docker.com | shapt 安装
+官方文档
+
+阿里云文档
+
+
+安装包以允许仓库使用 https
+sudo apt-get install -
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2018-08-13
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            牟勇
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%8E%AF%E5%A2%83/" class="post-category">
+                                    环境
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -943,12 +828,12 @@ class AuthController extends Controller
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Laravel/">
-                        <span class="chip bg-color">Laravel</span>
+                    <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+                        <span class="chip bg-color">服务器</span>
                     </a>
                     
-                    <a href="/tags/%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95/">
-                        <span class="chip bg-color">用户登录</span>
+                    <a href="/tags/docker/">
+                        <span class="chip bg-color">docker</span>
                     </a>
                     
                 </div>
@@ -1136,7 +1021,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">34.2k</span>&nbsp;字
+                class="white-color">34.6k</span>&nbsp;字
             
             
             

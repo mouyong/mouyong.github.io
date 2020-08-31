@@ -4,14 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Laravel 配置 cors 记录, = - =,牟勇">
-    <meta name="description" content="Laravel 配置 cors 记录配置过程Package 地址：https://github.com/barryvdh/laravel-cors
-
-安装
-
-composer require barryvdh/laravel-cors
-
-配">
+    <meta name="keywords" content="Laravel 集成 mongodb, = - =,牟勇">
+    <meta name="description" content="Laravel 集成 mongodb1. 安装composer require jenssegers/mongodb
+2. 在 config/databases.php 添加 mongodb 配置&#39;mongodb&#39; =&amp;gt; [
+    ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +15,7 @@ composer require barryvdh/laravel-cors
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Laravel 配置 cors 记录 | = - =</title>
+    <title>Laravel 集成 mongodb | = - =</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -260,12 +256,12 @@ composer require barryvdh/laravel-cors
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Laravel 配置 cors 记录</h1>
+                    <h1 class="description center-align post-title">Laravel 集成 mongodb</h1>
                 </div>
             </div>
         </div>
@@ -386,14 +382,6 @@ composer require barryvdh/laravel-cors
                                 <span class="chip bg-color">Laravel</span>
                             </a>
                         
-                            <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                                <span class="chip bg-color">前端</span>
-                            </a>
-                        
-                            <a href="/tags/CORS/">
-                                <span class="chip bg-color">CORS</span>
-                            </a>
-                        
                     </div>
                     
                 </div>
@@ -402,8 +390,8 @@ composer require barryvdh/laravel-cors
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%8E%AF%E5%A2%83/" class="post-category">
-                                环境
+                            <a href="/categories/Laravel/" class="post-category">
+                                Laravel
                             </a>
                         
                     </div>
@@ -415,7 +403,7 @@ composer require barryvdh/laravel-cors
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2018-08-13
+                    2020-08-20
                 </div>
                 
 
@@ -424,14 +412,14 @@ composer require barryvdh/laravel-cors
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    142
+                    415
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -447,35 +435,80 @@ composer require barryvdh/laravel-cors
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Laravel-配置-cors-记录"><a href="#Laravel-配置-cors-记录" class="headerlink" title="Laravel 配置 cors 记录"></a>Laravel 配置 cors 记录</h2><h2 id="配置过程"><a href="#配置过程" class="headerlink" title="配置过程"></a>配置过程</h2><p>Package 地址：<a href="https://github.com/barryvdh/laravel-cors" target="_blank" rel="noopener">https://github.com/barryvdh/laravel-cors</a></p>
-<ul>
-<li>安装</li>
-</ul>
-<p><code>composer require barryvdh/laravel-cors</code></p>
-<ul>
-<li>配置中间件</li>
-</ul>
-<pre><code>// \App\Http\Kernel $routeMiddleware 中添加
-protected $routeMiddleware = [
-    // ...
-    'cors' =&gt; \Barryvdh\Cors\HandleCors::class,
-];
+                <h1 id="Laravel-集成-mongodb"><a href="#Laravel-集成-mongodb" class="headerlink" title="Laravel 集成 mongodb"></a>Laravel 集成 mongodb</h1><h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h2><p><code>composer require jenssegers/mongodb</code></p>
+<h2 id="2-在-config-databases-php-添加-mongodb-配置"><a href="#2-在-config-databases-php-添加-mongodb-配置" class="headerlink" title="2. 在 config/databases.php 添加 mongodb 配置"></a>2. 在 config/databases.php 添加 mongodb 配置</h2><pre><code>'mongodb' =&gt; [
+    'driver' =&gt; 'mongodb',
+    'host' =&gt; env('DB_HOST', '127.0.0.1'),
+    'port' =&gt; env('DB_PORT', 27017),
+    'database' =&gt; env('DB_DATABASE', 'homestead'),
+    'username' =&gt; env('DB_USERNAME', 'homestead'),
+    'password' =&gt; env('DB_PASSWORD', 'secret'),
+    'options' =&gt; [
+        // here you can pass more settings to the Mongo Driver Manager
+        // see https://www.php.net/manual/en/mongodb-driver-manager.construct.php under "Uri Options" for a list of complete parameters that you can use
 
-// $middlewareGroups =&gt; api =&gt; 中添加
-'api' =&gt; [
-    // ...
-    'cors',
-],</code></pre><ul>
-<li>发布配置文件至 config 目录</li>
-</ul>
-<p><code>php artisan vendor:publish --provider="Barryvdh\Cors\ServiceProvider"</code></p>
-<ul>
-<li>禁用 API 的 CSRF 保护（可选）</li>
-</ul>
-<pre><code>// App\Http\Middleware\VerifyCsrfToken
-protected $except = [
-    'api/*'
-];</code></pre><script>
+        'database' =&gt; env('DB_AUTHENTICATION_DATABASE', 'admin'), // required with Mongo 3+
+    ],
+],</code></pre><h2 id="3-mongodb-添加用户信息"><a href="#3-mongodb-添加用户信息" class="headerlink" title="3. mongodb 添加用户信息"></a>3. mongodb 添加用户信息</h2><pre><code>use admin
+db.auth("username", "password")
+db.createUser({user: "your-username", pwd: "password", roles: [{role: "dbOwner", db: "database"}]})
+
+示例:
+use admin
+db.auth("root", "example")
+db.createUser({user: "test", pwd: "123456", roles: [{role: "dbOwner", db: "test"}]})</code></pre><h2 id="4-配置数据库环境"><a href="#4-配置数据库环境" class="headerlink" title="4. 配置数据库环境"></a>4. 配置数据库环境</h2><pre><code># mongodb production
+DB_CONNECTION=mongodb
+DB_HOST=ecs.iwnweb.com
+DB_PORT=27017
+DB_DATABASE=question-dev
+DB_USERNAME=question-dev
+DB_PASSWORD=123456</code></pre><h2 id="5-修改-User-模型的继承类"><a href="#5-修改-User-模型的继承类" class="headerlink" title="5. 修改 User 模型的继承类"></a>5. 修改 User 模型的继承类</h2><pre><code>use Jenssegers\Mongodb\Auth\User as Authenticatable;
+
+class User extends Authenticatable
+{
+
+}</code></pre><h2 id="6-修改-AppServiceProvider，为-Illuminate-Database-Eloquent-Builder-注入-result-函数"><a href="#6-修改-AppServiceProvider，为-Illuminate-Database-Eloquent-Builder-注入-result-函数" class="headerlink" title="6. 修改 AppServiceProvider，为 \Illuminate\Database\Eloquent\Builder 注入 result 函数"></a>6. 修改 <code>AppServiceProvider</code>，为 <code>\Illuminate\Database\Eloquent\Builder</code> 注入 <code>result</code> 函数</h2><pre><code>&lt;?php
+
+namespace App\Providers;
+
+&lt;...&gt;
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\ServiceProvider;
+
+class AppServiceProvider extends ServiceProvider
+{
+    &lt;...&gt;
+    public function boot()
+    {
+        &lt;...&gt;
+        // 设置数据库字符串默认长度，utf8mb4 索引长度最多为 191。
+        Schema::defaultStringLength(191);
+
+        // 为 `\Illuminate\Database\Eloquent\Builder` 注入 `result` 函数
+        \Illuminate\Database\Eloquent\Builder::macro('result', function () {
+            if (!request('page') || request('export')) {
+                return $this-&gt;get(request('columns', ['*']));
+            }
+
+            $per_page = (int) request('per_page', 20);
+
+            return $this-&gt;paginate($per_page &lt;= 100 ? $per_page : 100, request('columns', ['*']));
+        });
+        &lt;...&gt;
+    }
+    &lt;...&gt;
+}</code></pre><h2 id="6-修改-model-stub-的继承类"><a href="#6-修改-model-stub-的继承类" class="headerlink" title="6. 修改 model.stub 的继承类"></a>6. 修改 model.stub 的继承类</h2><p>1). 发布 stubs 文件<br>参考： <a href="https://learnku.com/docs/laravel/7.x/artisan/7480#stub-customization" target="_blank" rel="noopener">https://learnku.com/docs/laravel/7.x/artisan/7480#stub-customization</a></p>
+<p><code>php artisan stub:publish</code></p>
+<p>2). 修改 model.stub</p>
+<pre><code>namespace {{ namespace }};
+
+use Jenssegers\Mongodb\Eloquent\Model;
+
+class {{ class }} extends Model
+{
+    //
+}</code></pre><h2 id="7-文档"><a href="#7-文档" class="headerlink" title="7. 文档"></a>7. 文档</h2><p>Laravel MongoDB: <a href="https://github.com/jenssegers/laravel-mongodb" target="_blank" rel="noopener">https://github.com/jenssegers/laravel-mongodb</a></p>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -518,7 +551,7 @@ protected $except = [
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://blog.iwnweb.com/huan-jing/laravel-configuring-cors-record/">https://blog.iwnweb.com/huan-jing/laravel-configuring-cors-record/</a>
+                    <a href="https://blog.iwnweb.com/laravel/laravel-integration-mongodb/">https://blog.iwnweb.com/laravel/laravel-integration-mongodb/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -558,14 +591,6 @@ protected $except = [
                             
                                 <a href="/tags/Laravel/">
                                     <span class="chip bg-color">Laravel</span>
-                                </a>
-                            
-                                <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                                    <span class="chip bg-color">前端</span>
-                                </a>
-                            
-                                <a href="/tags/CORS/">
-                                    <span class="chip bg-color">CORS</span>
                                 </a>
                             
                         </div>
@@ -735,36 +760,31 @@ protected $except = [
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/huan-jing/deployer-usage-process/">
+                <a href="/uncategorized/laravel-integrated-user-login/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Deployer 使用过程">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Laravel 集成用户登录">
                         
-                        <span class="card-title">Deployer 使用过程</span>
+                        <span class="card-title">Laravel 集成用户登录</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Deployer 使用过程步骤详细解释可见参考 又一篇 Deployer 的使用攻略
-全局安装 deployer此部分在本地操作
-composer global require deployer/deployer -vvv
-查看是否安装成功
+                            Laravel 集成用户登录安装1. 安装 laravel/uicomposer require laravel/ui
+2. 生成身份验证脚手架php artisan ui vue --auth
+3. 编译最新的脚手架资源npm insta
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2018-08-13
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-22
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E7%8E%AF%E5%A2%83/" class="post-category">
-                                    环境
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            牟勇
                             
                         </span>
                     </div>
@@ -772,8 +792,12 @@ composer global require deployer/deployer -vvv
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%8E%AF%E5%A2%83/">
-                        <span class="chip bg-color">环境</span>
+                    <a href="/tags/Laravel/">
+                        <span class="chip bg-color">Laravel</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95/">
+                        <span class="chip bg-color">用户登录</span>
                     </a>
                     
                 </div>
@@ -787,40 +811,37 @@ composer global require deployer/deployer -vvv
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/huan-jing/installing-docker-environment/">
+                <a href="/uncategorized/git-for-bash-garbled-problem/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="安装 docker 环境">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="git-for-bash 乱码问题集锦">
                         
-                        <span class="card-title">安装 docker 环境</span>
+                        <span class="card-title">git-for-bash 乱码问题集锦</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            安装 docker 环境安装脚本安装sudo curl -sSL https://get.docker.com | shapt 安装
-官方文档
+                            git for bash 乱码问题集锦
+查看终端编码设置
 
-阿里云文档
+LANG c、Character Set utf-8 (unicode)
 
+输入中文乱码
 
-安装包以允许仓库使用 https
-sudo apt-get install -
+```~/.bashrcchcp.com 6500
+set meta-flag onse
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2018-08-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-20
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E7%8E%AF%E5%A2%83/" class="post-category">
-                                    环境
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            牟勇
                             
                         </span>
                     </div>
@@ -828,12 +849,12 @@ sudo apt-get install -
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">
-                        <span class="chip bg-color">服务器</span>
+                    <a href="/tags/%E7%8E%AF%E5%A2%83/">
+                        <span class="chip bg-color">环境</span>
                     </a>
                     
-                    <a href="/tags/docker/">
-                        <span class="chip bg-color">docker</span>
+                    <a href="/tags/windows/">
+                        <span class="chip bg-color">windows</span>
                     </a>
                     
                 </div>
@@ -1021,7 +1042,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">34.2k</span>&nbsp;字
+                class="white-color">34.6k</span>&nbsp;字
             
             
             
