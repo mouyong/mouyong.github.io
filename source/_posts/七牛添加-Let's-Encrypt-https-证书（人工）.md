@@ -2,7 +2,11 @@
 title: 七牛添加-Let's-Encrypt-https-证书（人工）
 date: 2020-07-29 11:47:48
 tags:
+- 运维
+categories: 运维
+english_title: Seven-cattle-add-let's-encrypt-https-certificate-(manual)
 ---
+
 ## 安装 acme.sh
 
 在命令行执行安装命令 `curl  https://get.acme.sh | sh`。

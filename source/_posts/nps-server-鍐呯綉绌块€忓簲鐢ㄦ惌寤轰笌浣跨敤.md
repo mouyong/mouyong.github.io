@@ -1,7 +1,10 @@
 ---
 title: nps server 内网穿透应用搭建与使用
 date: 2021-01-09 06:41:13
-tags: 内网穿透
+tags:
+- 内网穿透
+categories: 内网穿透
+english_title: The-construction-and-use-of-NPs-server-intranet-penetration-application
 ---
 
 # nps server 内网穿透应用搭建与使用
