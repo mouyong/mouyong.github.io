@@ -3,7 +3,7 @@ title: laravel 项目创建
 date: 2021-01-11 15:59:07
 tags:
 - Laravel
-categories: laravel
+categories: Laravel
 english_title: laravel-project-creation
 ---
 
