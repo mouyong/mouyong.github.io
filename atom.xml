@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.iwnweb.com/"/>
-  <updated>2021-01-11T07:32:01.652Z</updated>
+  <updated>2021-01-17T07:29:48.471Z</updated>
   <id>https://blog.iwnweb.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>laravel 项目创建</title>
+    <link href="https://blog.iwnweb.com/laravel/laravel-project-creation/"/>
+    <id>https://blog.iwnweb.com/laravel/laravel-project-creation/</id>
+    <published>2021-01-11T07:59:07.000Z</published>
+    <updated>2021-01-17T07:29:48.471Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;laravel-项目创建&quot;&gt;&lt;a href=&quot;#laravel-项目创建&quot; class=&quot;headerlink&quot; title=&quot;laravel 项目创建&quot;&gt;&lt;/a&gt;laravel 项目创建&lt;/h1&gt;&lt;h2 id=&quot;项目立项&quot;&gt;&lt;a href=&quot;#项目立项&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Laravel" scheme="https://blog.iwnweb.com/categories/Laravel/"/>
+    
+    
+      <category term="Laravel" scheme="https://blog.iwnweb.com/tags/Laravel/"/>
+    
+  </entry>
   
   <entry>
     <title>nps server 内网穿透应用搭建与使用</title>
@@ -544,35 +571,6 @@ sudo apt-get update &amp;amp;&amp;amp; sudo
     
     
       <category term="环境、搜索引擎" scheme="https://blog.iwnweb.com/tags/%E7%8E%AF%E5%A2%83%E3%80%81%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>golang 创建 tcp 服务器</title>
-    <link href="https://blog.iwnweb.com/kai-fa/golang-creates-tcp-server/"/>
-    <id>https://blog.iwnweb.com/kai-fa/golang-creates-tcp-server/</id>
-    <published>2019-08-18T07:26:34.000Z</published>
-    <updated>2020-01-31T05:46:37.619Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;直接放代码&quot;&gt;&lt;a href=&quot;#直接放代码&quot; class=&quot;headerlink&quot; title=&quot;直接放代码&quot;&gt;&lt;/a&gt;直接放代码&lt;/h2&gt;&lt;h3 id=&quot;1-服务器&quot;&gt;&lt;a href=&quot;#1-服务器&quot; class=&quot;headerlink&quot; title=&quot;1.
-        
-      
-    
-    </summary>
-    
-    
-      <category term="开发" scheme="https://blog.iwnweb.com/categories/%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="golang" scheme="https://blog.iwnweb.com/tags/golang/"/>
-    
-      <category term="TCP" scheme="https://blog.iwnweb.com/tags/TCP/"/>
     
   </entry>
   
