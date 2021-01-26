@@ -410,7 +410,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    319
+                    320
                 </div>
                 
 
@@ -434,7 +434,7 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="nps-server-内网穿透应用搭建与使用"><a href="#nps-server-内网穿透应用搭建与使用" class="headerlink" title="nps server 内网穿透应用搭建与使用"></a>nps server 内网穿透应用搭建与使用</h1><h2 id="下载镜像"><a href="#下载镜像" class="headerlink" title="下载镜像"></a>下载镜像</h2><pre><code>docker pull ffdfgdfg/nps</code></pre><h2 id="下载配置文件"><a href="#下载配置文件" class="headerlink" title="下载配置文件"></a>下载配置文件</h2><pre><code>git clone https://github.com/ehang-io/nps /data/nps</code></pre><h2 id="阅读文档修改配置文件"><a href="#阅读文档修改配置文件" class="headerlink" title="阅读文档修改配置文件"></a>阅读文档修改配置文件</h2><p><a href="https://ehang-io.github.io/nps/#/example" target="_blank" rel="noopener">https://ehang-io.github.io/nps/#/example</a></p>
-<h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><pre><code>docker run -d --name nps --net=host -v /data/nps:/conf ffdfgdfg/nps</code></pre><h2 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h2><pre><code>docker logs nps</code></pre><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><ul>
+<h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><pre><code>docker run -d --name nps --net=host -v /data/nps/conf:/conf ffdfgdfg/nps</code></pre><h2 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h2><pre><code>docker logs nps</code></pre><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><ul>
 <li>服务端</li>
 </ul>
 <ol>
