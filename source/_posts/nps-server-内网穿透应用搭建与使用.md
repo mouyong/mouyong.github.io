@@ -85,7 +85,7 @@ server_port=33891
 
 ## 参考
 
-[官网]: https://ehang-io.github.io/nps/#/install?id=%e5%ae%89%e8%a3%85%e5%8c%85%e5%ae%89%e8%a3%85
+[官网]: https://ehang-io.github.io/nps/#/install?id=安装包安装
 [docker hub]: https://hub.docker.com/r/ffdfgdfg/nps
 [github]: https://github.com/ehang-io/nps
 [注册到系统服务]: https://ehang-io.github.io/nps/#/use?id=注册到系统服务
