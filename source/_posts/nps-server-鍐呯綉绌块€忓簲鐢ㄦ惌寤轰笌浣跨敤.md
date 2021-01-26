@@ -50,10 +50,11 @@ docker logs nps
 文档: 域名代理 https://ehang-io.github.io/nps/#/use
 ```
 [common]
-server_addr=server_ip:8024
 conn_type=tcp
+server_addr=server_ip:8024
 vkey=client_vkey
-[agent-operation-api]
+
+[example]
 host=a.proxy.com
 target_addr=127.0.0.1:80
 host_change=example.test
