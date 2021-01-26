@@ -25,7 +25,7 @@ https://ehang-io.github.io/nps/#/example
 
 ## 启动
 ```
-docker run -d --name nps --net=host -v /data/nps:/conf ffdfgdfg/nps
+docker run -d --name nps --net=host -v /data/nps/conf:/conf ffdfgdfg/nps
 ```
 
 ## 查看日志
