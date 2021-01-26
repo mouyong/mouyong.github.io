@@ -75,6 +75,11 @@ host=a.proxy.com
 target_addr=127.0.0.1:80
 host_change=example.test
 header_set_proxy=nps
+
+[example-win10]
+mode=tcp
+target_addr=192.168.1.2:3389
+server_port=33891
 ```
 
 
