@@ -23,6 +23,22 @@ git clone https://github.com/ehang-io/nps /data/nps
 
 https://ehang-io.github.io/nps/#/example
 
+`vim /data/nps/conf/nps.conf`
+
+```diff
+-http_proxy_port=80
+-https_proxy_port=443
++http_proxy_port=800
++https_proxy_port=4430
+```
+
+```diff
+-web_username=admin
+-web_password=123
++web_username=admin_username
++web_password=admin_password
+```
+
 ## 启动
 ```
 docker run -d --name nps --net=host -v /data/nps/conf:/conf ffdfgdfg/nps
