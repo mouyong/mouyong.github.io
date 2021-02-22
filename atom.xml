@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.iwnweb.com/"/>
-  <updated>2021-02-22T09:03:27.494Z</updated>
+  <updated>2021-02-22T09:13:50.140Z</updated>
   <id>https://blog.iwnweb.com/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>应用配置管理 ACM</title>
-    <link href="https://blog.iwnweb.com/k8s/application-configuration-management-acm/"/>
-    <id>https://blog.iwnweb.com/k8s/application-configuration-management-acm/</id>
+    <link href="https://blog.iwnweb.com/yun-wei/application-configuration-management-acm/"/>
+    <id>https://blog.iwnweb.com/yun-wei/application-configuration-management-acm/</id>
     <published>2021-02-22T08:59:09.000Z</published>
-    <updated>2021-02-22T09:03:27.494Z</updated>
+    <updated>2021-02-22T09:13:50.140Z</updated>
     
     <summary type="html">
     
@@ -36,7 +36,7 @@
     </summary>
     
     
-      <category term="k8s" scheme="https://blog.iwnweb.com/categories/k8s/"/>
+      <category term="运维" scheme="https://blog.iwnweb.com/categories/%E8%BF%90%E7%BB%B4/"/>
     
     
       <category term="运维" scheme="https://blog.iwnweb.com/tags/%E8%BF%90%E7%BB%B4/"/>
