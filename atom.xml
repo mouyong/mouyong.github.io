@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.iwnweb.com/"/>
-  <updated>2021-01-17T07:29:48.471Z</updated>
+  <updated>2021-02-22T09:03:27.494Z</updated>
   <id>https://blog.iwnweb.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>应用配置管理 ACM</title>
+    <link href="https://blog.iwnweb.com/k8s/application-configuration-management-acm/"/>
+    <id>https://blog.iwnweb.com/k8s/application-configuration-management-acm/</id>
+    <published>2021-02-22T08:59:09.000Z</published>
+    <updated>2021-02-22T09:03:27.494Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;应用配置管理-ACM&quot;&gt;&lt;a href=&quot;#应用配置管理-ACM&quot; class=&quot;headerlink&quot; title=&quot;应用配置管理 ACM&quot;&gt;&lt;/a&gt;应用配置管理 ACM&lt;/h1&gt;&lt;h2 id=&quot;登录控制台，选择合适的地域&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="k8s" scheme="https://blog.iwnweb.com/categories/k8s/"/>
+    
+    
+      <category term="运维" scheme="https://blog.iwnweb.com/tags/%E8%BF%90%E7%BB%B4/"/>
+    
+  </entry>
   
   <entry>
     <title>laravel 项目创建</title>
@@ -543,34 +570,6 @@ sudo apt-get update &amp;amp;&amp;amp; sudo
       <category term="k8s" scheme="https://blog.iwnweb.com/tags/k8s/"/>
     
       <category term="运维" scheme="https://blog.iwnweb.com/tags/%E8%BF%90%E7%BB%B4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>搭建 elasticsearch 环境</title>
-    <link href="https://blog.iwnweb.com/sou-suo-yin-qing/build-elastic-search-environment/"/>
-    <id>https://blog.iwnweb.com/sou-suo-yin-qing/build-elastic-search-environment/</id>
-    <published>2019-11-01T22:42:54.000Z</published>
-    <updated>2020-01-31T05:46:37.767Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;搭建步骤&quot;&gt;&lt;a href=&quot;#搭建步骤&quot; class=&quot;headerlink&quot; title=&quot;搭建步骤&quot;&gt;&lt;/a&gt;搭建步骤&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;上传编写好的 docker 版 elasticsearch.zip
-        
-      
-    
-    </summary>
-    
-    
-      <category term="搜索引擎" scheme="https://blog.iwnweb.com/categories/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/"/>
-    
-    
-      <category term="环境、搜索引擎" scheme="https://blog.iwnweb.com/tags/%E7%8E%AF%E5%A2%83%E3%80%81%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/"/>
     
   </entry>
   
