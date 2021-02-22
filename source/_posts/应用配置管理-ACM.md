@@ -1,7 +1,7 @@
 ---
 title: 应用配置管理 ACM
 date: 2021-02-22 16:59:09
-categories: k8s
+categories: 运维
 tags:
   - 运维
 english_title: Application-configuration-management-ACM
