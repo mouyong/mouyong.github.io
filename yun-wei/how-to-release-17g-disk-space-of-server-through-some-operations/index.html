@@ -469,7 +469,12 @@
 <li>docker 服务是否有限制日志输出选项？</li>
 </ol>
 <p>通过 <code>cat /etc/docker/daemon.json</code> 查看服务器启动配置得知，日志驱动使用的是 json-file，日志配置选项为每个容器保留 3份日志文件，每份文件最大大小为 100M。</p>
-<ol start="2">
+<pre><code>{
+  "registry-mirrors": ["https://oifw9ovt.mirror.aliyuncs.com"],
+  "exec-opts": ["native.cgroupdriver=systemd"],
+  "log-driver": "json-file",
+  "log-opts": {"max-size": "50m", "max-file": "3"}
+}</code></pre><ol start="2">
 <li>sentry 服务是否有配置日志输出选项？</li>
 </ol>
 <p>通过 <code>cat /path/to/onpremise/docker-compose.yml</code> 查看 sentry 服务的 docker-compose 编排文件，可以得知与 docker 服务一致，日志驱动使用的是 json-file，日志配置选项为每个容器保留 3份日志文件，每份文件最大大小为 100M。</p>
