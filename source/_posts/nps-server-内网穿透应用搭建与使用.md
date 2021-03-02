@@ -33,10 +33,26 @@ https://ehang-io.github.io/nps/#/example
 ```
 
 ```diff
+-public_vkey=123
++# public_vkey=123
+```
+
+```diff
+-#p2p_port=6000
++p2p_ip=server_ip
++p2p_port=6000
+```
+
+```diff
 -web_username=admin
 -web_password=123
 +web_username=admin_username
 +web_password=admin_password
+```
+
+```diff
+-allow_user_login=false
++allow_user_login=true
 ```
 
 ## 启动
