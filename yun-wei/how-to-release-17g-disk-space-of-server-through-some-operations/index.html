@@ -422,7 +422,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    5 分
                 </div>
                 
 
@@ -510,6 +510,15 @@
 <p>c. 清空内核日志<br><code>cat /dev/null &gt; /var/log/dmesg</code></p>
 <p>d. 清空 Linux 操作系统常见的系统和服务错误信息<br><code>cat /dev/null &gt; /var/log/messages</code></p>
 <p>e. 清空事件记录监控程序日志<br><code>cat /dev/null &gt; /var/log/syslog</code></p>
+<p>f. 清理 journal 日志</p>
+<pre><code># 查看磁盘占用
+journalctl --disk-usage
+
+# 清理日志
+journalctl --vacuum-size=10M
+
+# 只保留一周的日志
+journalctl --vacuum-time=1w</code></pre><p>g. 删除 24小时前下载的镜像<br><code>docker image prune -a --filter "until=24h"</code></p>
 <h2 id="末：单服务器释放了-17G-的磁盘空间"><a href="#末：单服务器释放了-17G-的磁盘空间" class="headerlink" title="末：单服务器释放了 17G 的磁盘空间"></a>末：单服务器释放了 17G 的磁盘空间</h2><p>最后，一番操作后，单服务器释放了 17G 的磁盘空间。</p>
 <p><img src="/yun-wei/how-to-release-17g-disk-space-of-server-through-some-operations/%E6%97%A5%E5%BF%97%E6%B8%85%E7%90%86%E5%90%8E.png" alt="日志清理后"></p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
@@ -1037,7 +1046,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">35.8k</span>&nbsp;字
+                class="white-color">35.9k</span>&nbsp;字
             
             
             
