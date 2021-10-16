@@ -16,14 +16,16 @@ english_title: Installing-docker-environment
 ### 脚本安装
 
 ```
-sudo curl -sSL https://get.docker.com | sh
+sudo curl -fsSL https://get.docker.com | sh
+
+sudo curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun`
 ```
 
 ### apt 安装
 
 - [官方文档](https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-docker-ce)
 
-- [阿里云文档](https://help.aliyun.com/document_detail/60742.html?spm=5176.11065259.1996646101.searchclickresult.728f232cP3DvSO)
+- [阿里云文档](https://developer.aliyun.com/article/110806)
 
 安装包以允许仓库使用 https
 
@@ -117,7 +119,9 @@ sudo mkdir -p /etc/docker
 sudo tee /etc/docker/daemon.json <<-'EOF'
 {
   "registry-mirrors": ["你的镜像加速地址"],
-  "exec-opts": [ "native.cgroupdriver=systemd" ]
+  "exec-opts": ["native.cgroupdriver=systemd"],
+  "log-driver": "json-file",
+  "log-opts": {"max-size": "100m", "max-file": "3"}
 }
 EOF
 sudo systemctl daemon-reload
@@ -145,3 +149,15 @@ for log in $logs
 
 echo "======== end clean docker containers logs ========"
 ```
+
+## 添加用户组
+
+`sudo usermod -aG docker $(whoami)`
+
+## 添加清除镜像的定时任务至 root crontab
+
+`1 0 * * * docker image prune -a --filter "until=4h"`
+
+## 开放端口
+
+请查看云服务商的相关文档进行操作
