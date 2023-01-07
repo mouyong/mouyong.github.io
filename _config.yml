@@ -147,7 +147,7 @@ feed:
   content_limit_delim: ' '
   order_by: -date
 
-# git clone https://github.com/blinkfox/hexo-theme-matery themes/hexo-theme-matery
+# git clone https://ghproxy.com/https://github.com/blinkfox/hexo-theme-matery themes/hexo-theme-matery
 # npm install https://github.com/CodeFalling/hexo-asset-image --save
 # npm i --save hexo-wordcount
 # npm i -S hexo-prism-plugin
