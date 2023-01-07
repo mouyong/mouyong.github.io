@@ -4,7 +4,7 @@ menu:
   Index:
     url: /
     icon: fas fa-home
-  PluginsWorld:
+  PW:
     url: http://plugins-world.hecs.iwnweb.com
     icon: fas fa-blog
   Tags:
