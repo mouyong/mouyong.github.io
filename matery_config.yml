@@ -4,7 +4,7 @@ menu:
   Index:
     url: /
     icon: fas fa-home
-  PW:
+  PluginsWorld:
     url: http://plugins-world.hecs.iwnweb.com
     icon: fas fa-blog
   Tags:
@@ -63,6 +63,13 @@ cover:
   intervalTime: 5000 # 自动切换下一张的间隔时间. Automatically switch the interval of the next one.
   useConfig: false # 是否使用配置文件, 在 _data/covers.json 下配置推荐文章, false则使用主题在文章中的配置 cover coverImg
   # useConfig 使用方式: 将主题 hexo-theme-matery/source/_data/covers.json 移动到 my-blog/source/_data/下修改配置即可
+  video:
+    enable: false
+    src: 
+      - https://txmov2.a.yximgs.com/upic/2021/04/09/22/BMjAyMTA0MDkyMjMwMDhfMTg1ODk2MDg4N180NzUyOTMyMjA4Nl8xXzM=_b_B8e080d7ede19e6674d48a9f12545007b.mp4?pkey=AAVAfNhi5_f-HGkIPXrY5w6nyf4JibwOY-WwdHgSJ2aSoi-2WQLpiYDunLbRZQuESz875eMdsepRlVFtXg9nuQY58uRc-7AsF0kEMNR6QYBj56g9JFFMSGdsoKK2-SV27u8&tag=1-1617978682-xpcwebprofile-0-lcvipceuti-9e40072f87531f1a&clientCacheKey=3xbbtbrfxqpccp4_b.mp4
+      - https://txmov2.a.yximgs.com/upic/2021/04/09/21/BMjAyMTA0MDkyMTQyNDRfMTg1ODk2MDg4N180NzUyNjAyMzA0N18xXzM=_b_B83b004b85aba8eca3ded270637616575.mp4
+      - https://txmov2.a.yximgs.com/upic/2021/04/09/21/BMjAyMTA0MDkyMTU4MDNfMTg1ODk2MDg4N180NzUyNzE0MzkyNV8xXzM=_b_Bf94cee6bd181efeaca64049bd2e4e276.mp4
+# index page dream text,
 
 # index page dream text,
 # 配置首页显示"梦想"的语句.
@@ -76,17 +83,42 @@ dream:
 # 是否在首页显示音乐.
 music:
   enable: false
-  showTitle: true
-  title: 听听音乐
-  fixed: false # 开启吸底模式
-  autoplay: false # 是否自动播放
+  title: #非吸底模式有效
+    enable: true
+    show: 听听音乐
+  autoHide: true    # hide automaticaly
+  server: netease   #require	music platform: netease, tencent, kugou, xiami, baidu
+  type: playlist    #require song, playlist, album, search, artist
+  id: 503838841     #require	song id / playlist id / album id / search keyword
+  fixed: true       # 开启吸底模式
+  autoplay: false   # 是否自动播放
   theme: '#42b983'
-  loop: 'all' # 音频循环播放, 可选值: 'all', 'one', 'none'
-  order: 'list' # 音频循环顺序, 可选值: 'list', 'random'
-  preload: 'auto' # 预加载，可选值: 'none', 'metadata', 'auto'
-  volume: 0.7 # 默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
-  listFolded: false # 列表默认折叠
-  listMaxHeight: #列表最大高度
+  loop: 'all'       # 音频循环播放, 可选值: 'all', 'one', 'none'
+  order: 'random'   # 音频循环顺序, 可选值: 'list', 'random'
+  preload: 'auto'   # 预加载，可选值: 'none', 'metadata', 'auto'
+  volume: 0.7       # 默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
+  listFolded: true  # 列表默认折叠
+  hideLrc: true     # 隐藏歌词
+
+# Whether to display the musics.
+# 单独的音乐页面.
+musics:
+  enable: false
+  title:          #非吸底模式有效
+    enable: true
+    show: 听听音乐
+  server: tencent   #require music platform: netease, tencent, kugou, xiami, baidu
+  type: playlist    #require song, playlist, album, search, artist
+  id: 1776127550     #require song id / playlist id / album id / search keyword
+  fixed: false      # 开启吸底模式
+  autoplay: true   # 是否自动播放
+  theme: '#42b983'
+  loop: 'all'       # 音频循环播放, 可选值: 'all', 'one', 'none'
+  order: 'random'   # 音频循环顺序, 可选值: 'list', 'random'
+  preload: 'auto'   # 预加载，可选值: 'none', 'metadata', 'auto'
+  volume: 0.7       # 默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
+  listFolded: false  # 列表默认折叠
+  listMaxHeight: "525px" #列表最大高度
 
 # Whether to display the videos.
 # 是否在首页显示视频.
@@ -94,7 +126,8 @@ video:
   enable: false
   showTitle: true
   title: 精彩视频
-  url: # 必填
+  url: # url和iframeUrl其中一个必填
+  iframeUrl: #在bilibili或者爱奇艺分享时选择iframe，然后填那个url来这里，sample: //player.bilibili.com/player.html?aid=669520137&bvid=BV1oa4y1L7mw&cid=234543483&page=1
   pic:
   thumbnails:
   height: # 如：400
@@ -123,8 +156,8 @@ logo: /medias/logo.png
 indexbtn:
   enable: true
   name: 插件世界
-  icon: fab fa-github-alt
-  url: http://plugins-world.hecs.iwnweb.com/
+  icon: fab fa-blog
+  url: https://plugins-world.hecs.iwnweb.com/
 
 # The configurations of the second line of home banner
 # icon/button will not show up if you leave the corresponding socialLink empty
@@ -198,6 +231,29 @@ postInfo:
 clicklove:
   enable: true
 
+# | 文件名             | 说明                   |
+# | :----------------- | :--------------------- |
+# | sakura-small.js    | 少量樱花               |
+# | sakura-half.js     | 樱花相对原效果数量减半 |
+# | sakura-reduce.js   | 樱花相对原效果减少1/4  |
+# | sakura.js          | 樱花数量不变（原效果） |
+# 默认事sakura.js，如需修改，请到下面地址修改
+# libs
+#   js:
+#     sakura: /libs/others/sakura-reduce.js
+# 是否激活页面樱花效果, 只在桌面版网页启用特效
+# 下面三种特效建议选择一种就够了，
+sakura:
+  enable: false
+
+# 是否激活页面鼠标星星跟随效果, 只在桌面版网页启用特效
+mouseStar:
+  enable: false
+
+  # 是否激活页面飘雪效果, 只在桌面版网页启用特效
+snowdown:
+  enable: false
+
 # profile in about page, including avatars, career, and personal introductions.
 # 在”关于”页面中配置个人信息，包括头像、职业和个人介绍.
 profile:
@@ -211,11 +267,11 @@ profile:
 myProjects:
   enable: true
   data:
-    hexo-theme-matery:
-      icon: fas fa-file-alt
+    插件世界:
+      icon: fas fa-blog
       iconBackground: 'linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)'
-      url: https://github.com/mouyong/translate
-      desc: 集成百度翻译、有道云翻译、谷歌翻译、金山词霸翻译的 PHP 翻译 SDK。
+      url: https://plugins-world.hecs.iwnweb.com
+      desc: 查找插件从未如此简单
 
 # config my skills informations in about page.
 # If you don't want to display this `My Skills` content, you can deactivate or delete this configuration.
@@ -256,6 +312,18 @@ myGallery:
 # 设置在归档页面中是否显示'文章日历'控件
 postCalendar: true
 
+# 不建议使用gittalk,gitment这样权限过高的oauth app,因为它们能够 读写 授权者 所有的公共仓库 ，也就是说拿到你的授权 Token 的人，可以将你的 GitHub 公共仓库删空（这是github权限分的不够细的锅），如果恶意攻击者想获取使用者的 AccessToken，只需要在代码中加上一个 ajax 请求即可。原贴地址:https://www.v2ex.com/t/535608。建议大家看完。（我没有在用gittalk/gitment的网站上评论过，但根据v2ex网友的提示，如果网站自行修改了 gitalk.js 脚本 或者反代了 github api，就很容易拿到你的 Token ）
+
+# https://github.com/utterance/utterances 是个 GitHub App，它的权限仅限于某个仓库。像 hugo hexo 这种静态页面类型的博客，clientID/clientSecret 泄露是不可避免的。我认为较好的解决方式是像 utteras 这种 GitHubApp，只有一个仓库的读写权限，将破坏降到最小。
+
+# valine是使用的免费的leancloud开发版资源，即使数据丢了leancloud也不用负任何的责任。此外valine的src目录已在1.4.0后停止更新。。。薛定谔的开源。
+
+# 当初多说国内最大都倒了，livere不一定靠谱。
+
+# disqus被墙了。
+
+# 畅言需要备案。
+
 # the Gitalk config，default disabled
 # Gitalk 评论模块的配置，默认为不激活
 gitalk:
@@ -289,13 +357,22 @@ livere:
   enable: false
   uid:
 
+# 腾讯人机验证
+# 注意：目前只适配和测试了valine，其它评论系统未调试验证！
+# 介绍: https://cloud.tencent.com/document/product/1110/36841
+# 管理验证码: https://console.cloud.tencent.com/captcha/graphical
+tcaptcha:
+  enable: false
+  appid: xxxxxxxxxx # 你的appid
+
 # The configuration of the Valine comment module is not activated by default.
 # To use it, activate the configuration item and set appId and appKey.
 # Valine 评论模块的配置，默认为不激活，如要使用，就请激活该配置项，并设置 appId 和 appKey.
 valine:
   enable: false
-  appId:
-  appKey:
+  appId:  # 必填
+  appKey: # 必填
+  serverURLs: # 必填 https://你的api
   notify: false
   verify: false
   visitor: true
@@ -303,13 +380,39 @@ valine:
   pageSize: 10
   placeholder: 'just go go' # Comment Box placeholder
   background: /medias/comment_bg.png
+  coolpushkey: 
 
+# The configuration of the Waline comment module is not activated by default.
+# To use it, activate the configuration item.
+# Waline 评论模块的配置，默认为不激活，如要使用，就请激活该配置项
+# See: https://waline.js.org/
+waline:
+  enable: false
+  # Waline 服务端部署参考 https://waline.js.org/guide/server/intro.html 客户端和服务端版本需一致
+  # 下面是一个例子，请替换成自己的服务端
+  serverURL: https://waline.your-domain.com
+  avatar: 'mp' # Gravatar style : ''/mp/identicon/monsterid/wavatar/retro/hide
+
+changyan:
+  enable: false
+  appId:
+  conf:
 # Whether to display fork me on github icon and link, default true, You can change it to your repo address
 # 配置是否在 header 中显示 fork me on github 的图标，默认为true，你可以修改为你的仓库地址.
 githubLink:
+  enable: true
+  url: https://plugins-world.hecs.iwnweb.com
+  title: 插件世界
+
+# The configuration of the Twikoo comment module is not activated by default.
+# To use it, activate the configuration item and set envId.
+# Twikoo 评论模块的配置，默认为不激活，如要使用，就请激活该配置项，并设置环境 ID envId.
+# See: https://twikoo.js.org
+twikoo:
   enable: false
-  url: https://github.com/mouyong
-  title: Fork Me
+  envId: twikoo-1gs9l0fb17e7897a # 环境 ID，搭建教程：https://twikoo.js.org/quick-start.html
+  # region: ap-guangzhou # 环境地域，默认为 ap-shanghai
+  # path: 'window.location.pathname' # 自定义文章路径
 
 # The password verification feature of read post. To use this feature,
 # activate the configuration item and write the 'password' key and Cipher in the post's Front-matter.
@@ -318,7 +421,7 @@ githubLink:
 # 阅读文章的密码验证功能，如要使用此功能请激活该配置项，并在对应文章的Front-matter中写上'password'的键和加密后的密文即可.
 # 请注意：为了保证密码原文不会被泄露到网页中，文章的密码必须是通过'SHA256'加密的，这样就不会被破解.
 verifyPassword:
-  enable: true
+  enable: false
   promptMessage: 请输入访问本文章的密码
   errorMessage: 密码错误，将返回主页！
 
@@ -347,33 +450,56 @@ baiduPush: true
 # The used front-end library can be replaced with the corresponding CDN address as needed,
 # If the specific version is not specified below, you can use the latest version.
 # 使用到的前端库，可按需替换成对应的CDN地址，如果下面未指定具体的版本号，使用最新的版本即可.
+# 注：jsdelivr可以自动帮你生成.min版的js和css，所以你在设置js及css路径中可以直接写.min.xxx
 libs:
   css:
-    fontAwesome: /libs/awesome/css/all.css # V5.11.1
-    materialize: /libs/materialize/materialize.min.css # 1.0.0
+    matery: /css/matery.css
+    mycss: /css/my.css
+    post: /css/post.css
+    reward: /css/reward.css
+    dark: /css/dark.css
+    indexcover: /css/indexcover.css
+    gallery: /css/gallery.css
+    fontAwesome: /libs/awesome/css/all.min.css # V6.1.2 20220809
+    materialize: /libs/materialize/materialize.min.css # 1.0.0 20211109
     aos: /libs/aos/aos.css
     animate: /libs/animate/animate.min.css # V3.5.1
-    lightgallery: /libs/lightGallery/css/lightgallery.min.css # V1.6.11
+    lightgallery: /libs/lightGallery/css/lightgallery.min.css # V1.10.0
     aplayer: /libs/aplayer/APlayer.min.css
     dplayer: /libs/dplayer/DPlayer.min.css
     gitalk: /libs/gitalk/gitalk.css
     jqcloud: /libs/jqcloud/jqcloud.css
     tocbot: /libs/tocbot/tocbot.css
+    prism: /libs/prism/prism.min.css
+    mermaid: /libs/mermaid/mermaid.min.css
+    fancybox: /libs/fancybox/jquery.fancybox.css
+    justifiedGallery: /libs/justifiedGallery/justifiedGallery.min.css
   js:
-    jquery: /libs/jquery/jquery.min.js
+    matery: /js/matery.js
+    sc2tc: /js/tw_cn.js
+    jquery: /libs/jquery/jquery-3.6.0.min.js  #3.6.0 20211109
     materialize: /libs/materialize/materialize.min.js # 1.0.0
     masonry: /libs/masonry/masonry.pkgd.min.js # v4.0.0
     aos: /libs/aos/aos.js
     scrollProgress: /libs/scrollprogress/scrollProgress.min.js
-    lightgallery: /libs/lightGallery/js/lightgallery-all.min.js # V1.6.11
+    lightgallery: /libs/lightGallery/js/lightgallery-all.min.js # V1.10.0
+    typed: /libs/typed/typed.js
     clicklove: /libs/others/clicklove.js
+    sakura: /libs/others/sakura.js
+    star: /libs/others/star.js
+    snow: /libs/others/snow.js
+    tcaptcha: /libs/others/TencentCaptcha.js
     busuanzi: /libs/others/busuanzi.pure.mini.js
     aplayer: /libs/aplayer/APlayer.min.js
+    meting: /libs/aplayer/Meting.min.js
     dplayer: /libs/dplayer/DPlayer.min.js
     crypto: /libs/cryptojs/crypto-js.min.js
     echarts: /libs/echarts/echarts.min.js
     gitalk: /libs/gitalk/gitalk.min.js
     valine: /libs/valine/Valine.min.js # 若想保持最新版，请替换为 https://unpkg.com/valine/dist/Valine.min.js  默认为 /libs/valine/Valine.min.js
+    minivaline: /libs/minivaline/MiniValine.js # latest
+    waline: /libs/waline/Waline.min.js # 若想保持最新版，请替换为 https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js 默认为(1.5.2版本) /libs/valine/Valine.min.js
+    twikoo: /libs/twikoo/twikoo.all.min.js # 若想保持最新版，请替换为 https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js  默认为 /libs/twikoo/twikoo.all.min.js
     jqcloud: /libs/jqcloud/jqcloud-1.0.4.min.js
     tocbot: /libs/tocbot/tocbot.min.js
     canvas_nest: /libs/background/canvas-nest.js
@@ -381,6 +507,14 @@ libs:
     ribbonRefresh: /libs/background/ribbon-refresh.min.js
     ribbon_dynamic: /libs/background/ribbon-dynamic.js
     instantpage: /libs/instantpage/instantpage.js
+    mermaid: /libs/mermaid/mermaid.min.js
+    fancybox: /libs/fancybox/fancybox.js
+    justifiedGallery: /libs/justifiedGallery/justifiedGallery.min.js
+    prism: /libs/prism/prism.min.js
+    codeblock: /libs/codeBlock/codeBlockFuction.js
+    codelang: /libs/codeBlock/codeLang.js
+    codecopy: /libs/codeBlock/codeCopy.js
+    codeshrink: /libs/codeBlock/codeShrink.js
 
 # The post featured images that needs to be displayed when there is no image.
 # 无文章特色图片时需要显示的文章特色图片.
@@ -443,6 +577,10 @@ tidio:
   enable: false
   public_key:
 
+# 腾讯兔小巢，见https://txc.qq.com/
+tuxiaochao:
+  enable: false
+  productId:
 #背景canvas-nest
 canvas_nest:
   enable: false
@@ -484,8 +622,9 @@ subtitle:
   startDelay: 300 # 开始延迟
   typeSpeed: 100 # 打字速度
   backSpeed: 50 # 删除速度
-  sub1: 从来没有真正的绝境, 只有心灵的迷途
-  sub2: Never really desperate, only the lost of the soul
+  sub:
+    - 从来没有真正的绝境, 只有心灵的迷途
+    - Never really desperate, only the lost of the soul
 
 # 手机二级菜单.
 navMenu:
@@ -501,19 +640,88 @@ instantpage:
 banner:
   enable: true
 
+# 中文繁简转换开关
+# 显示在底部 footer 栏
+translate:
+  enable: false
+
 #ICP备案信息尾部显示
 icp:
   enable: false
   url: # 备案链接
   text: # 备案信息
 
-# CDN访问加速
-# 第一次使用本功能，一定要先配置url，再`hexo cl&&hexo g&&hexo d`部署到GitHub的仓库，注意！必须是GitHub的仓库！
-# 如果必须要使用国内的coding或者gittee，可以采用双部署，同时将网站部署到两个仓库（其中一个必须是GitHub的仓库）
+# CDN访问加速 
+# 第一次使用本功能，一定要先配置url，再`hexo cl && hexo g && hexo d`部署到GitHub的仓库，注意！必须是GitHub的仓库！
+# 如果必须要使用国内的coding或者gitee，可以采用双部署，同时将网站部署到两个仓库（其中一个必须是GitHub的仓库）
 # URL配置规则（例子如下）： https://cdn.jsdelivr.net/gh/你的GitHub用户名/你的仓库名
 # 如果想关闭此功能，将 url地址 注释或删除即可！
 #
 # 注：配置了此项，就代表着本地调试的时候，网站依然会去GitHub请求资源（原来的资源），本地调试的时候记得将 此项配置 注释或者删除掉
 # 更多关于访问速度优化，请查看：https://blog.sky03.cn/posts/42790.html
+# 注：jsdelivr可以自动帮你生成.min版的js和css，所以你在上面设置js及css路径中可以直接写.min.xxx
 jsDelivr:
   url: # https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io
+  
+# 网站背景图
+background:
+  enable: false
+  url: "https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg"
+
+# 说说 https://artitalk.js.org/
+artitalk:
+  enable: false
+  appId: # xxxxx
+  appKey: # xxxxxx
+
+# 哔哔功能配置
+# 登陆leancloud创建应用。进入应用后，点击创建 Class，将「 Class 名称」命名为 content
+# 点击刚刚创建的content Class，点击添加列并创建名称为content的列，类型为String，注意列注释也要填写（随意填）
+# 记录appid，masterkey，api域名
+# 输入:hexo new page bb
+# hexo就在source文件夹下创建了bb/index.md。
+# 修改index.md的frontmater下的layout为bb：
+# ---
+# title: 黑石说
+# layout: bb
+# ---
+# 里面的文字可以自己随意加，会显示在哔哔的上方。
+# 关注公众号 "黑石哔哔"，发送: //bindCurrentUser:你的APPID,你的MASTERKEY,你的RESTAPI
+# 可用leancloud国际版，国际版api为 https://appid前八位.api.lncldglobal.com
+bbtime:
+  enable: false
+  appId: # 你的appId
+  appKey: # 你的appKey
+  serverURLs: # https://你的api
+
+
+# 图表绘制插件
+# 建议更换更换hexo-renderer-markdown-it引擎。参考下面链接
+# https://github.com/hexojs/hexo-renderer-markdown-it
+# https://github.com/hexojs/hexo-renderer-markdown-it/wiki/Advanced-Configuration
+# 使用教程： https://blog.17lai.site/posts/cf0f47fd/#Mermaid
+# 安装配置方法
+# yarn remove hexo-renderer-marked
+# yarn add hexo-renderer-markdown-it hexo-tag-mermaid
+# 注意：hexo-renderer-markdown-it 比默认引擎更快，可选择插件较多，请认真看上面两个链接教程。
+# mermaid语法教程 https://mermaid-js.github.io/mermaid/#/
+# 使用方法：
+# 在post文章中填写mermaid语句，需要使用{% mermaid %} 包裹
+# {% mermaid %}
+# [mermaid 语句正文]
+# {% endmermaid %}
+# 样例如下所示：
+# {% mermaid %}
+# graph TD
+#     A[Christmas] -->|Get money| B(Go shopping)
+#     B --> C{Let me think}
+#     C -->|One| D[Laptop]
+#     C -->|Two| E[iPhone]
+#     C -->|Three| F[Car]
+# {% endmermaid %}
+# mermaid chart。 依赖hexo-tag-mermaid
+mermaid: ## mermaid url https://github.com/knsv/mermaid
+  enable: false  # default false
+  version: "latest" # default v7.1.2
+  options:  # find more api options from https://github.com/knsv/mermaid/blob/master/src/mermaidAPI.js
+    #startOnload: true  // default true
