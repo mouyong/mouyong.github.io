@@ -156,7 +156,7 @@ logo: /medias/logo.png
 indexbtn:
   enable: true
   name: 插件世界
-  icon: fab fa-blog
+  icon: fas fa-blog
   url: https://plugins-world.hecs.iwnweb.com/
 
 # The configurations of the second line of home banner
@@ -272,6 +272,11 @@ myProjects:
       iconBackground: 'linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)'
       url: https://plugins-world.hecs.iwnweb.com
       desc: 查找插件从未如此简单
+    文档站:
+      icon: fas fa-blog
+      iconBackground: 'linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)'
+      url: http://mouyong.github.io/vitepress-doc-website/
+      desc: 创建个人网站、官方站点不再困难
 
 # config my skills informations in about page.
 # If you don't want to display this `My Skills` content, you can deactivate or delete this configuration.
