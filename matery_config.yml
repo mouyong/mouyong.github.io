@@ -8,22 +8,22 @@ menu:
     url: http://plugins-world.hecs.iwnweb.com
     icon: fas fa-blog
   Tags:
-    url: /tags
+    url: /tags/
     icon: fas fa-tags
   Categories:
-    url: /categories
+    url: /categories/
     icon: fas fa-bookmark
   Archives:
-    url: /archives
+    url: /archives/
     icon: fas fa-archive
   About:
-    url: /about
+    url: /about/
     icon: fas fa-user-circle
   Contact:
-    url: /contact
+    url: /contact/
     icon: fas fa-comments
   Friends:
-    url: /friends
+    url: /friends/
     icon: fas fa-address-book
   # 二级菜单写法如下
   #Medias:
